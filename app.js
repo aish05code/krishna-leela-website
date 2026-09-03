@@ -1,15 +1,22 @@
 /**
- * KRISHNA LEELA - SACRED & MODERN INTERACTIVE WEB EXPERIENCE
- * 16 Exact Divine Stories from PDF, Bilingual Support,
- * Clean Typography (No English brackets in Hindi, No Emojis in stories section),
- * Full Phone Browser Compatibility, Web Audio API Bansuri Synthesizer.
+ * KRISHNA LEELAS - SACRED & MODERN IMMERSIVE DIGITAL JOURNEY
+ * Complete Master Implementation:
+ * - 16 Exact stories with updated titles (गोपी वस्त्रहरण, कंस संहार, पद प्रक्षालन)
+ * - Story 1 revised sentence: "उस समय यह भविष्यवाणी हुई थी कि देवकी की आठवीं संतान कंस के अत्याचार का अंत करेगी।"
+ * - Life Lessons Categories: Unconditional Love, Pure Friendship, Righteous Courage, Divine Wisdom
+ * - True Autoplay Divine Flute (triggers immediately on page load, preserves state across navigation)
+ * - Default language: Hindi (Strict English numerals 0-9 in English mode)
+ * - Dedicated Story Webpages (story.html?id=X)
+ * - Authentic Indian Spiritual Storyteller starting with "Shree Krishnaaya Namah"
+ * - 1:1 Golden Craftsmanship Image Frame with Full-Screen Lightbox expansion
  */
 
-// 1. DATASET: 16 STORIES (NO EMOJIS, CLEAN TITLES)
+// 1. DATASET OF 16 SACRED STORIES
 const STORIES_DATA = [
   {
     "id": 1,
     "theme": "courage",
+    "slug": "karagrha-janma",
     "title": {
       "en": "Karagrha Janma",
       "hi": "कारागृह जन्म"
@@ -20,7 +27,7 @@ const STORIES_DATA = [
     },
     "about": {
       "en": "In the dark prison of Mathura, Devaki and Vasudeva were held captive by the cruel King Kansa. A prophecy had foretold that Devaki’s eighth child would bring an end to Kansa’s tyranny.\n\nOn the sacred night of Krishna Janmashtami, at midnight, Lord Krishna was born as their eighth child. At that divine moment, the prison was filled with a celestial light. The guards fell into a deep sleep, the chains binding Vasudeva loosened, and the locked prison doors miraculously opened.\n\nThe little child born within prison walls had come to free the world from fear, injustice and oppression.",
-      "hi": "मथुरा के अंधकारमय कारागार में क्रूर राजा कंस ने देवकी और वसुदेव को बंदी बना रखा था। आकाशवाणी ने भविष्यवाणी की थी कि देवकी की आठवीं संतान कंस के अत्याचार का अंत करेगी।\n\nभाद्रपद कृष्ण अष्टमी की पावन मध्यरात्रि में, भगवान श्रीकृष्ण ने आठवीं संतान के रूप में जन्म लिया। उस दिव्य क्षण में संपूर्ण कारागार अलौकिक प्रकाश से आलोकित हो उठा। पहरेदार गहरी निद्रा में सो गए, वसुदेव की बेड़ियाँ स्वतः खुल गईं और बंद लौह कपाट चमत्कारिक रूप से खुल गए।\n\nकारागार की दीवारों के भीतर जन्मा वह नन्हा बालक संसार को भय, अन्याय और उत्पीड़न से मुक्त करने आया था।"
+      "hi": "मथुरा के अंधकारमय कारागार में क्रूर राजा कंस ने देवकी और वसुदेव को बंदी बना रखा था। उस समय यह भविष्यवाणी हुई थी कि देवकी की आठवीं संतान कंस के अत्याचार का अंत करेगी।\n\nभाद्रपद कृष्ण अष्टमी की पावन मध्यरात्रि में, भगवान श्रीकृष्ण ने आठवीं संतान के रूप में जन्म लिया। उस दिव्य क्षण में संपूर्ण कारागार अलौकिक प्रकाश से आलोकित हो उठा। पहरेदार गहरी निद्रा में सो गए, वसुदेव की बेड़ियाँ स्वतः खुल गईं और बंद लौह कपाट चमत्कारिक रूप से खुल गए।\n\nकारागार की दीवारों के भीतर जन्मा वह नन्हा बालक संसार को भय, अन्याय और उत्पीड़न से मुक्त करने आया था।"
     },
     "lessonHighlight": {
       "en": "Light can be born even in the darkest place.",
@@ -34,6 +41,7 @@ const STORIES_DATA = [
   {
     "id": 2,
     "theme": "courage",
+    "slug": "yamuna-taran",
     "title": {
       "en": "Yamuna Taran",
       "hi": "यमुना तरण"
@@ -57,7 +65,8 @@ const STORIES_DATA = [
   },
   {
     "id": 3,
-    "theme": "love",
+    "theme": "courage",
+    "slug": "putana-vadha",
     "title": {
       "en": "Putana Vadha / Putana Moksha",
       "hi": "पूतना वध व मोक्ष"
@@ -82,6 +91,7 @@ const STORIES_DATA = [
   {
     "id": 4,
     "theme": "love",
+    "slug": "navnit-bhakshan-leela",
     "title": {
       "en": "Navnit Bhakshan Leela",
       "hi": "नवनीत भक्षण लीला"
@@ -105,10 +115,11 @@ const STORIES_DATA = [
   },
   {
     "id": 5,
-    "theme": "love",
+    "theme": "friendship",
+    "slug": "makhan-chori-leela",
     "title": {
-      "en": "Navnitchor Leela",
-      "hi": "माखन चोर लीला"
+      "en": "Makhan Chori Leela",
+      "hi": "माखन चोरी लीला"
     },
     "subtitle": {
       "en": "Krishna, the Beloved Makhan Chor",
@@ -123,13 +134,14 @@ const STORIES_DATA = [
       "hi": "आनंद बाँटने, सरलता और परस्पर साथ में ही निवास करता है।"
     },
     "lesson": {
-      "en": "Navnitchor Leela reminds us not to lose the playfulness of childhood. Krishna’s mischief brought people together and filled ordinary homes with laughter. Life becomes richer when we share what we have, cherish our relationships and leave a little room for innocent joy.",
-      "hi": "माखन चोर लीला हमें बचपन के भोलापन और आनंद को कभी न खोने का संदेश देती है। कान्हा की शरारतों ने लोगों को परस्पर जोड़ा और साधारण घरों को हंसी से भर दिया। जीवन तब समृद्ध बनता है जब हम जो कुछ हमारे पास है उसे बाँटते हैं, रिश्तों का सम्मान करते हैं और मन में निष्कपट आनंद के लिए स्थान रखते हैं।"
+      "en": "Makhan Chori Leela reminds us not to lose the playfulness of childhood. Krishna’s mischief brought people together and filled ordinary homes with laughter. Life becomes richer when we share what we have, cherish our relationships and leave a little room for innocent joy.",
+      "hi": "माखन चोरी लीला हमें बचपन के भोलापन और आनंद को कभी न खोने का संदेश देती है। कान्हा की शरारतों ने लोगों को परस्पर जोड़ा और साधारण घरों को हंसी से भर दिया। जीवन तब समृद्ध बनता है जब हम जो कुछ हमारे पास है उसे बाँटते हैं, रिश्तों का सम्मान करते हैं और मन में निष्कपट आनंद के लिए स्थान रखते हैं।"
     }
   },
   {
     "id": 6,
     "theme": "wisdom",
+    "slug": "yamalarjuna-bhanjana",
     "title": {
       "en": "Yamalarjuna Bhanjana",
       "hi": "यमलार्जुन भंजन"
@@ -154,6 +166,7 @@ const STORIES_DATA = [
   {
     "id": 7,
     "theme": "friendship",
+    "slug": "krishna-ki-toli",
     "title": {
       "en": "Krishna ki Toli",
       "hi": "कृष्णा की टोली"
@@ -177,14 +190,15 @@ const STORIES_DATA = [
   },
   {
     "id": 8,
-    "theme": "friendship",
+    "theme": "love",
+    "slug": "krishna-balaram",
     "title": {
       "en": "Krishna Balaram",
       "hi": "कृष्ण-बलराम"
     },
     "subtitle": {
       "en": "The Bond of Two Brothers",
-      "hi": "गोकुल व वृंदावन में परस्पर रक्षा, स्नेह और संगति"
+      "hi": "गोकुल व वृंदावन में परस्पर रक्षा, स्नेह और भ्रातृ-प्रेम"
     },
     "about": {
       "en": "Krishna and his elder brother Balaram grew up together in the joyful surroundings of Gokul and Vrindavan. From tending cows and playing in the fields to sharing childhood mischief and facing dangers together, the two brothers were constant companions.\n\nBalaram, known for his immense strength and protective nature, often stood beside Krishna, while Krishna filled their adventures with his wisdom, courage and playfulness. Their personalities were different, yet beautifully complementary.\n\nTheir childhood represents more than divine adventures—it celebrates the simple and enduring bond between brothers: growing together, protecting one another and standing side by side through every experience.",
@@ -202,6 +216,7 @@ const STORIES_DATA = [
   {
     "id": 9,
     "theme": "courage",
+    "slug": "kaliya-mardhana",
     "title": {
       "en": "Kaliya Mardhana",
       "hi": "कालिया मर्दन"
@@ -225,7 +240,8 @@ const STORIES_DATA = [
   },
   {
     "id": 10,
-    "theme": "courage",
+    "theme": "wisdom",
+    "slug": "govardhan-dharan",
     "title": {
       "en": "Govardhan Dharan",
       "hi": "गोवर्धन धारण"
@@ -250,9 +266,10 @@ const STORIES_DATA = [
   {
     "id": 11,
     "theme": "wisdom",
+    "slug": "gopi-vastraharana",
     "title": {
       "en": "Gopi Vastraharana",
-      "hi": "चीर हरण लीला"
+      "hi": "गोपी वस्त्रहरण"
     },
     "subtitle": {
       "en": "Krishna and the Gopis’ Katyayani Vrata",
@@ -274,6 +291,7 @@ const STORIES_DATA = [
   {
     "id": 12,
     "theme": "love",
+    "slug": "raas-leela",
     "title": {
       "en": "Raas Leela",
       "hi": "रास लीला"
@@ -298,17 +316,18 @@ const STORIES_DATA = [
   {
     "id": 13,
     "theme": "love",
+    "slug": "kesh-prasadhana-shringar-leela",
     "title": {
       "en": "Kesh-Prasadhana / Shringar Leela",
       "hi": "केश-प्रसाधन व शृंगार लीला"
     },
     "subtitle": {
-      "en": "Radha-Krishna Shringar Leela",
-      "hi": "श्रीकृष्ण द्वारा प्रेमपूर्वक श्रीराधा का केश-शृंगार व सेवा"
+      "en": "Rukmini-Krishna Shringar Leela",
+      "hi": "श्रीकृष्ण द्वारा प्रेमपूर्वक महारानी रुक्मिणी का केश-शृंगार व सेवा"
     },
     "about": {
-      "en": "Among the tender Leelas of Radha and Krishna are moments of Shringar—adorning one another with affection. In Kesh-Prasadhana, Krishna lovingly arranges Radha’s hair, decorating it with fragrant flowers and ornaments.\n\nHere, the one worshipped by the entire world lovingly serves his beloved. The gesture is simple and intimate: Krishna’s attention is not on his own grandeur, but on bringing joy to Radha.\n\nThe Leela beautifully expresses the tenderness of Radha-Krishna prema, where love is shown not merely through words, but through care, attention and acts of service.",
-      "hi": "राधा और कृष्ण की अत्यंत सुकोमल लीलाओं में शृंगार के क्षण अनुपम हैं—जहाँ वे एक-दूसरे को अगाध स्नेह से सुसज्जित करते हैं। केश-प्रसाधन में, श्रीकृष्ण स्वयं अपने हाथों से श्रीराधा के केश संवारते हैं और उन्हें सुगंधित पुष्पों व आभूषणों से सजाते हैं।\n\nयहाँ, जिनकी पूजा समस्त त्रिलोकी करती है, वे स्वयं अपनी प्रियतमा की प्रेममयी सेवा करते हैं। यह भाव अत्यंत सरल और आत्मीय है: प्रभु का ध्यान अपने ऐश्वर्य पर नहीं, अपितु श्रीराधा के मुख पर आनंदमयी मुस्कान लाने पर है।\n\nयह लीला राधा-कृष्ण प्रेम के उस कोमल स्वरूप को प्रकट करती है, जहाँ प्रेम केवल शब्दों में नहीं, बल्कि आत्मीय देखभाल, सम्मान और सेवा-भाव में अभिव्यक्त होता है।"
+      "en": "Among the tender Leelas of Rukmini and Krishna are moments of Shringar—adorning one another with affection. In Kesh-Prasadhana, Krishna lovingly arranges Rukmini’s hair, decorating it with fragrant flowers and ornaments.\n\nHere, the one worshipped by the entire world lovingly serves his beloved. The gesture is simple and intimate: Krishna’s attention is not on his own grandeur, but on bringing joy to Rukmini.\n\nThe Leela beautifully expresses the tenderness of Rukmini-Krishna prema, where love is shown not merely through words, but through care, attention and acts of service.",
+      "hi": "रुक्मिणी और श्रीकृष्ण की सुकोमल लीलाओं में शृंगार के क्षण अनुपम हैं—जहाँ वे एक-दूसरे को अगाध स्नेह से सुसज्जित करते हैं। केश-प्रसाधन में, श्रीकृष्ण स्वयं अपने हाथों से महारानी रुक्मिणी के केश संवारते हैं और उन्हें सुगंधित पुष्पों व आभूषणों से सजाते हैं।\n\nयहाँ, जिनकी पूजा समस्त त्रिलोकी करती है, वे स्वयं अपनी प्रियतमा की प्रेममयी सेवा करते हैं। यह भाव अत्यंत सरल और आत्मीय है: प्रभु का ध्यान अपने ऐश्वर्य पर नहीं, अपितु रुक्मिणी जी के मुख पर आनंदमयी मुस्कान लाने पर है।\n\nयह लीला रुक्मिणी-कृष्ण प्रेम के उस कोमल स्वरूप को प्रकट करती है, जहाँ प्रेम केवल शब्दों में नहीं, बल्कि आत्मीय देखभाल, सम्मान और सेवा-भाव में अभिव्यक्त होता है।"
     },
     "lessonHighlight": {
       "en": "Love is not only something we feel; it is something we do.",
@@ -322,6 +341,7 @@ const STORIES_DATA = [
   {
     "id": 14,
     "theme": "love",
+    "slug": "radha-krishna-premkatha",
     "title": {
       "en": "Radha Krishna ki Premkatha",
       "hi": "राधा-कृष्ण की अमर प्रेमकथा"
@@ -346,9 +366,10 @@ const STORIES_DATA = [
   {
     "id": 15,
     "theme": "courage",
+    "slug": "kansa-vadha",
     "title": {
       "en": "Kansa Vadha",
-      "hi": "कंस वध"
+      "hi": "कंस संहार"
     },
     "subtitle": {
       "en": "Krishna Defeats Kansa",
@@ -370,9 +391,10 @@ const STORIES_DATA = [
   {
     "id": 16,
     "theme": "friendship",
+    "slug": "pada-prakshalana",
     "title": {
       "en": "Pada Prakshalana",
-      "hi": "पाद प्रक्षालन"
+      "hi": "पद प्रक्षालन"
     },
     "subtitle": {
       "en": "Krishna Welcomes Sudama",
@@ -393,184 +415,810 @@ const STORIES_DATA = [
   }
 ];
 
-// 2. BILINGUAL UI TRANSLATIONS (NO ENGLISH IN BRACKETS BESIDE HINDI)
+// 2. BILINGUAL UI TRANSLATIONS
 const TRANSLATIONS = {
   hi: {
     shloka_nav: "॥ श्री कृष्णाय नमः ॥",
+    nav_center_title: "कृष्ण लीलाएँ",
+    brand_subtitle: "कृष्ण लीलाएँ",
     nav_home: "दर्शन",
-    nav_stories: "१६ कथाएँ",
-    nav_lessons: "जीवन की सीख",
-    nav_blessings: "आशीर्वाद",
+    nav_stories: "कथाएँ",
+    nav_lessons: "जीवन दर्शन",
     flute_btn: "बाँसुरी धुन",
-    invocation_banner: "॥ श्री कृष्णाय नमः ॥",
     hero_title_1: "कृष्ण के अनेक रूप,",
     hero_title_2: "अनेक लीलाएँ और कथाएँ…",
-    hero_verse_1: "हमारे घर में सजे हर स्वरूप के पीछे छिपी है एक कथा।",
-    hero_verse_2: "किसी में प्रेम, किसी में मित्रता, किसी में साहस और किसी में जीवन की एक छोटी-सी सीख।",
-    hero_verse_3: "आइए, कान्हा के इन स्वरूपों और उनकी कहानियों को जानें।",
-    hero_explore_btn: "१६ पावन कथाएँ पढ़ें",
+    hero_intro_text: "किसी में प्रेम, किसी में मित्रता; कहीं साहस; और कभी जीवन की सहज सीख। आइए, कान्हा के इन दिव्य स्वरूपों और उनकी कहानियों को जानें।",
+    hero_explore_btn: "पावन कथाएँ पढ़ें",
     hero_music_btn: "बाँसुरी की मधुर तान",
     stat_swaroops: "दिव्य कथाएँ",
-    stat_themes: "जीवन के सूत्र",
+    stat_themes: "जीवन सूत्र",
     stat_grace: "भगवद् कृपा",
+    stat_grace_val: "अनंत",
     artwork_caption: "यत्र योगेश्वरः कृष्णो यत्र पार्थो धनुर्धरः",
     card_daily_wisdom: "गीता अमृत",
     shloka_verse: "“सर्वधर्मान्परित्यज्य मामेकं शरणं व्रज।<br>अहं त्वा सर्वपापेभ्यो मोक्षयिष्यामि मा शुचः॥”",
     shloka_meaning: "“सब धर्मों को मुझमें समर्पित कर केवल मेरी शरण में आ जाओ; मैं तुम्हें समस्त बंधनों से मुक्त कर दूँगा।”",
     shloka_ref: "— श्रीमद्भगवद्गीता (१८.६६)",
     card_virtues_title: "हर लीला में एक दिव्य संदेश",
-    v_love: "प्रेम",
-    v_love_desc: "माखन भक्षण, रास व शृंगार लीला",
-    v_friendship: "मित्रता",
-    v_friendship_desc: "कृष्णा की टोली, बलराम संग व सुदामा",
-    v_courage: "साहस",
-    v_courage_desc: "यमुना तरण, गोवर्धन व कंस वध",
-    v_wisdom: "सीख",
-    v_wisdom_desc: "यमलार्जुन भंजन व चीर हरण",
-    scroll_prompt: "कथाओं में प्रवेश करें",
-    section_badge: "कान्हा की १६ पावन कथाएँ",
+    v_love: "निश्छल प्रेम",
+    v_love_desc: "नवनीत, कृष्ण-बलराम, रास व शृंगार लीला",
+    v_friendship: "सच्ची मित्रता",
+    v_friendship_desc: "माखन चोरी, कृष्णा की टोली व पद प्रक्षालन",
+    v_courage: "धर्म-साहस",
+    v_courage_desc: "कारागृह जन्म, यमुना तरण, पूतना व कंस संहार",
+    v_wisdom: "दिव्य विवेक",
+    v_wisdom_desc: "यमलार्जुन भंजन, गोवर्धन धारण व गोपी वस्त्रहरण",
+    scroll_prompt: "लीलाओं में प्रवेश करें",
+    wisdom_badge: "दैनिक जीवन में कृष्ण दर्शन",
+    wisdom_heading: "कान्हा की लीलाओं से जीवन को सुंदर बनाने के ४ पावन सूत्र",
+    wisdom_subheading: "चार दिव्य मार्ग जो कृष्ण की कथाओं को हमारे दैनिक जीवन, भावनाओं और चेतना से जोड़ते हैं।",
+    cat_love_title: "निश्छल प्रेम",
+    cat_love_desc: "माता यशोदा के वात्सल्य से लेकर श्रीराधा संग दिव्य महारास तक, कान्हा सिखाते हैं कि सच्चा प्रेम अधिकार जताने में नहीं, बल्कि निःस्वार्थ समर्पण, आत्मीय सेवा और निश्छल स्नेह में खिलता है।",
+    cat_love_stories: "नवनीत भक्षण • कृष्ण-बलराम • रास लीला • शृंगार लीला • राधा-कृष्ण",
+    cat_friendship_title: "सच्ची मित्रता",
+    cat_friendship_desc: "गोकुल में सखाओं संग माखन बांटने और पतंग उड़ाने से लेकर राजसिंहासन छोड़ सुदामा के चरण पखारने तक, कान्हा का संदेश है कि सच्ची मित्रता में धन, पद और ऐश्वर्य का कोई भेद नहीं होता।",
+    cat_friendship_stories: "माखन चोरी • कृष्णा की टोली • पद प्रक्षालन (सुदामा)",
+    cat_courage_title: "धर्म-साहस",
+    cat_courage_desc: "कंस के कारागार में आधी रात को प्राकट्य से लेकर उफनती यमुना और कालिया नाग के दमन तक, कान्हा सिखाते हैं कि धर्म के मार्ग पर विश्वास ही हमारे भय को असीम आत्मबल में बदल देता है।",
+    cat_courage_stories: "कारागृह जन्म • यमुना तरण • पूतना वध • कालिया मर्दन • कंस संहार",
+    cat_wisdom_title: "दिव्य विवेक",
+    cat_wisdom_desc: "यमलार्जुन वृक्षों के अहंकार-मुक्ति से लेकर कनिष्ठिका पर गोवर्धन पर्वत धारण तक, कान्हा हमें सिखाते हैं कि बाह्य दंभ और कर्मकांडों से ऊपर उठकर प्रकृति का सम्मान और विनम्र समर्पण ही सच्ची प्रज्ञा है।",
+    cat_wisdom_stories: "यमलार्जुन भंजन • गोवर्धन धारण • गोपी वस्त्रहरण",
+    cat_explore_btn: "कथाएँ पढ़ें →",
+    section_badge: "कान्हा की पावन कथाएँ",
     stories_heading: "हर कहानी में कृष्ण, और हर कृष्ण में एक सीख",
     stories_subheading: "कारागृह जन्म, यमुना तरण, माखन चोरी, गोवर्धन धारण, रास लीला और सुदामा स्वागत की पावन कथाएँ और उनसे मिलने वाली जीवनोपयोगी प्रेरणा।",
-    filter_all: "सभी १६ कथाएँ",
+    filter_all: "सभी कथाएँ",
     filter_love: "प्रेम",
     filter_friendship: "मित्रता",
-    filter_courage: "साहस",
-    filter_wisdom: "जीवन की सीख",
+    filter_courage: "धर्म-साहस",
+    filter_wisdom: "दिव्य विवेक",
     search_placeholder: "स्वरूप या कथा खोजें...",
     read_more_btn: "कथा पढ़ें →",
     lesson_tag: "जीवन की सीख:",
-    wisdom_badge: "दैनिक जीवन में कृष्ण दर्शन",
-    wisdom_heading: "कान्हा की लीलाओं से जीवन को सुंदर बनाने के ४ मार्ग",
-    pillar_1_title: "निश्छल प्रेम",
-    pillar_1_desc: "नवनीत लीला और रास हमें सिखाते हैं कि सच्चा प्रेम अधिकार जताने में नहीं, बल्कि संपूर्ण समर्पण और निःस्वार्थ सेवा में है।",
-    pillar_1_tag: "माखन चोर • शृंगार लीला",
-    pillar_2_title: "सच्ची मित्रता",
-    pillar_2_desc: "कृष्णा की टोली और सुदामा के चरण पखारना सिद्ध करता है कि सच्ची मित्रता में पद, प्रतिष्ठा और संपत्ति का कोई भेद नहीं होता।",
-    pillar_2_tag: "कृष्णा टोली • पाद प्रक्षालन",
-    pillar_3_title: "संकट में अटूट धैर्य",
-    pillar_3_desc: "उफनती यमुना में उतरते वसुदेव और कनिष्ठिका पर गोवर्धन धारण कान्हा का संदेश है कि विश्वास असंभव में भी मार्ग बना देता है।",
-    pillar_3_tag: "यमुना तरण • गोवर्धन धारण",
-    pillar_4_title: "अहंकार मुक्ति व न्याय",
-    pillar_4_desc: "यमलार्जुन भंजन और कंस वध सिखाते हैं कि सच्ची स्वतंत्रता अहंकार गिरने से मिलती है, और भय की नींव पर खड़ी सत्ता कभी नहीं टिकती।",
-    pillar_4_tag: "यमलार्जुन • कंस वध",
-    aside_1: "हर कहानी में कृष्ण, और हर कृष्ण में एक सीख।",
-    aside_1_sub: "Every story holds Krishna, and every Krishna form holds a timeless lesson for the soul.",
-    aside_2: "॥ जय श्री कृष्ण ॥",
-    aside_2_blessing: "May Krishna always fill your life with love, joy, courage and light. 🦚",
-    janmotsav_title: "🪷 कृष्ण जन्मोत्सव की हार्दिक शुभकामनाएँ 🪷",
-    janmotsav_text: "श्रीकृष्ण की कृपा से आपके घर-परिवार में सदैव सुख, शांति, प्रेम और आनंद का वास रहे। कान्हा आपके जीवन के हर महाभारत में आपके सारथी बनें।",
-    read_counter_lbl: "कथाएँ पढ़ी गईं",
+    darshan_caption: "दिव्य झाँकी",
     modal_about_heading: "पावन कथा",
     modal_lesson_heading: "जीवन की सीख",
     modal_benediction_text: "भगवान श्रीकृष्ण आपके जीवन को सदैव प्रेम, आनंद और प्रकाश से परिपूर्ण रखें।",
-    modal_notes_title: "हमारे घर के कान्हा",
-    modal_notes_help: "आपके घर में सजे इस स्वरूप के बारे में कोई विशेष संस्मरण, शृंगार या विचार यहाँ लिखें:",
-    user_note_placeholder: "उदा. यह मूर्ति हमारे पूज्य दादाजी के समय की है, जिसे जन्माष्टमी पर पीतांबर वस्त्रों से सजाया जाता है...",
     listen_story_btn: "कथा सुनें",
-    listening_active: "वाचन जारी है...",
+    listening_active: "कथा वाचन जारी है...",
+    audio_storyteller_desc: "भारतीय साधु वाणी व तानपुरा की पावन ध्वनि में कथावाचन",
     prev_story: "पिछली कथा",
     next_story: "अगली कथा",
-    mark_read: "पढ़ा हुआ चिह्नित करें",
-    marked_as_read: "✓ पढ़ा गया",
-    note_saved_msg: "✓ विचार स्वतः सहेजा गया",
+    all_stories_btn: "सभी कथाएँ",
+    view_all_stories: "सभी कथाएँ देखें",
+    footer_title: "॥ श्री कृष्णाय नमः ॥",
     footer_quote: "“कृष्णं वन्दे जगद्गुरुम्” — अखिल ब्रह्मांड के सद्गुरु भगवान श्रीकृष्ण के पावन चरणों में कोटिशः प्रणाम।",
     copyright_text: "॥ जय श्री कृष्ण ॥ • A Divine Celebration of Krishna Leela & Swaroop Kathas"
   },
   en: {
     shloka_nav: "॥ Shree Krishnaya Namah ॥",
+    nav_center_title: "Krishna Leelas",
+    brand_subtitle: "Krishna Leelas",
     nav_home: "Darshan",
-    nav_stories: "16 Stories",
-    nav_lessons: "Wisdom",
-    nav_blessings: "Blessings",
+    nav_stories: "Stories",
+    nav_lessons: "Life Lessons",
     flute_btn: "Divine Flute",
-    invocation_banner: "॥ Shree Krishnaya Namah ॥",
     hero_title_1: "Many Forms of Krishna,",
     hero_title_2: "Countless Leelas & Divine Tales…",
-    hero_verse_1: "Behind every sacred form enshrined in our homes lies a timeless story.",
-    hero_verse_2: "In one there is love, in another friendship, in another courage, and in another a gentle lesson for life.",
-    hero_verse_3: "Come, let us explore these divine swaroops of Kanha and their stories.",
-    hero_explore_btn: "Read 16 Sacred Stories",
+    hero_intro_text: "In one, love; in another, friendship; somewhere courage; and sometimes gentle lessons for life. Come, let us explore these divine swaroops of Kanha and his stories.",
+    hero_explore_btn: "Explore Sacred Stories",
     hero_music_btn: "Sweet Flute Melody",
     stat_swaroops: "Sacred Stories",
     stat_themes: "Core Virtues",
     stat_grace: "Boundless Grace",
+    stat_grace_val: "Infinite",
     artwork_caption: "Where there is Krishna, there is victory & righteousness",
     card_daily_wisdom: "Gita Nectar",
     shloka_verse: "“Abandon all varieties of righteousness and simply surrender unto Me alone.<br>I shall liberate you from all sins; do not grieve.”",
     shloka_meaning: "“Dedicate every duty to Me and take shelter in My grace; I will deliver you from all bondage.”",
     shloka_ref: "— Bhagavad Gita (18.66)",
     card_virtues_title: "A Timeless Message in Every Leela",
-    v_love: "Love",
-    v_love_desc: "Navnit, Raas & Shringar Leela",
-    v_friendship: "Friendship",
-    v_friendship_desc: "Krishna ki Toli, Balaram & Sudama",
-    v_courage: "Courage",
-    v_courage_desc: "Yamuna Taran, Govardhan & Kansa Vadha",
-    v_wisdom: "Wisdom",
-    v_wisdom_desc: "Yamalarjuna & Gopi Vastraharana",
+    v_love: "Unconditional Love",
+    v_love_desc: "Navnit, Krishna Balaram, Raas & Shringar",
+    v_friendship: "Pure Friendship",
+    v_friendship_desc: "Makhan Chori, Krishna ki Toli & Sudama",
+    v_courage: "Righteous Courage",
+    v_courage_desc: "Karagrha Janma, Yamuna, Putana & Kansa",
+    v_wisdom: "Divine Wisdom",
+    v_wisdom_desc: "Yamalarjuna, Govardhan & Gopi Vastraharana",
     scroll_prompt: "Enter the Sacred Stories",
-    section_badge: "Kanha's 16 Sacred Stories",
+    wisdom_badge: "Living with Krishna's Wisdom",
+    wisdom_heading: "Four Sacred Life Lessons from Krishna's Leelas",
+    wisdom_subheading: "Four sacred paths connecting Krishna's stories to our everyday life, relationships, and spiritual awakening.",
+    cat_love_title: "Unconditional Love",
+    cat_love_desc: "From mother Yashoda feeding fresh butter to the transcendent Raas with Radha, Krishna reveals that true love demands nothing—it blossoms through selfless care, deep affection, and complete emotional surrender.",
+    cat_love_stories: "Navnit Bhakshan • Krishna Balaram • Raas Leela • Shringar Leela • Radha-Krishna",
+    cat_friendship_title: "Pure Friendship",
+    cat_friendship_desc: "Whether stealing butter with village friends, flying kites under open skies, or washing Sudama's weary feet, Krishna shows that genuine camaraderie dissolves all boundaries of wealth, status, and pride.",
+    cat_friendship_stories: "Makhan Chori • Krishna ki Toli • Pada Prakshalana (Sudama)",
+    cat_courage_title: "Righteous Courage",
+    cat_courage_desc: "From his midnight birth in Kansa's dungeon to subduing the venomous Kaliya, Krishna teaches us that courage is not the absence of fear, but the unwavering faith to step forward and defend truth against oppression.",
+    cat_courage_stories: "Karagrha Janma • Yamuna Taran • Putana Vadha • Kaliya Mardhana • Kansa Vadha",
+    cat_wisdom_title: "Divine Wisdom",
+    cat_wisdom_desc: "By freeing the twin trees from pride, sheltering Vrindavan beneath Mount Govardhan, and revealing inner devotion in the Yamuna, Krishna reminds us to let go of outward ego and seek harmony with nature and spirit.",
+    cat_wisdom_stories: "Yamalarjuna Bhanjana • Govardhan Dharan • Gopi Vastraharana",
+    cat_explore_btn: "Explore Stories →",
+    section_badge: "Sacred Stories of Kanha",
     stories_heading: "In Every Story Dwells Krishna, and in Every Form a Lesson",
     stories_subheading: "Sacred tales and practical life wisdom from the divine leelas of Lord Krishna, from his prison birth in Mathura to welcoming Sudama in Dwarka.",
-    filter_all: "All 16 Stories",
+    filter_all: "All Stories",
     filter_love: "Love",
     filter_friendship: "Friendship",
-    filter_courage: "Courage",
-    filter_wisdom: "Wisdom",
+    filter_courage: "Righteous Courage",
+    filter_wisdom: "Divine Wisdom",
     search_placeholder: "Search story or theme...",
     read_more_btn: "Read Story →",
     lesson_tag: "The Lesson:",
-    wisdom_badge: "Living with Krishna's Wisdom",
-    wisdom_heading: "Four Sacred Paths from Krishna's Life to Enrich Ours",
-    pillar_1_title: "Unconditional Love",
-    pillar_1_desc: "Navnit Leela and Raas teach us that true love seeks nothing in return—it is an offering of pure presence and joy.",
-    pillar_1_tag: "Navnit • Raas Leela",
-    pillar_2_title: "Pure Friendship",
-    pillar_2_desc: "Flying kites with his toli and washing Sudama’s feet prove that genuine relationships value the person, not material status.",
-    pillar_2_tag: "Krishna Toli • Pada Prakshalana",
-    pillar_3_title: "Unshakable Faith",
-    pillar_3_desc: "Stepping into the raging Yamuna and sheltering Braj beneath Govardhan show that walking with faith opens doors through the impossible.",
-    pillar_3_tag: "Yamuna Taran • Govardhan",
-    pillar_4_title: "Courage & Humility",
-    pillar_4_desc: "Uprooting the twin trees and defeating tyrant Kansa remind us that arrogance chains the soul, while righteous courage frees the world.",
-    pillar_4_tag: "Yamalarjuna • Kansa Vadha",
-    aside_1: "In every story dwells Krishna, and in every Krishna a timeless lesson.",
-    aside_1_sub: "Behind every idol decorated in our homes lies an eternal spark of divinity.",
-    aside_2: "॥ Jai Shree Krishna ॥",
-    aside_2_blessing: "May Krishna always fill your life with love, joy, courage and light.",
-    janmotsav_title: "Warmest Greetings on Krishna Janmotsav",
-    janmotsav_text: "May Lord Krishna's divine presence bless your family with joy, peace, loving devotion, and harmony. May Kanha be your lifelong charioteer through every challenge.",
-    read_counter_lbl: "Stories Explored",
+    darshan_caption: "Divine Darshan",
     modal_about_heading: "The Story",
     modal_lesson_heading: "The Lesson",
-    modal_benediction_text: "May Krishna always fill your life with love, joy and light.",
-    modal_notes_title: "Our Family's Kanha",
-    modal_notes_help: "Write any special memories, traditional decorations, or personal thoughts about this deity form in your home:",
-    user_note_placeholder: "e.g., This vigraha was brought home during Janmashtami and is lovingly adorned with saffron robes and fresh butter...",
+    modal_benediction_text: "May Lord Krishna always fill your life with love, joy and light.",
     listen_story_btn: "Listen Story",
-    listening_active: "Narrating...",
+    listening_active: "Narrating Katha...",
+    audio_storyteller_desc: "Sacred narration with warm Indian voice & atmospheric Tanpura",
     prev_story: "Previous Story",
     next_story: "Next Story",
-    mark_read: "Mark as Read",
-    marked_as_read: "✓ Read",
-    note_saved_msg: "✓ Note saved automatically",
+    all_stories_btn: "All Stories",
+    view_all_stories: "View All Stories",
+    footer_title: "॥ Shree Krishnaya Namah ॥",
     footer_quote: "“Krishnam Vande Jagadgurum” — Humble salutations at the lotus feet of Lord Krishna, the spiritual master of all creation.",
     copyright_text: "॥ Jai Shree Krishna ॥ • A Divine Celebration of Krishna Leela & Swaroop Kathas"
   }
 };
 
+// 3. APPLICATION STATE (Default Language is Hindi)
 const state = {
-  lang: localStorage.getItem('krishna_lang') || 'en',
+  lang: localStorage.getItem('krishna_lang') || 'hi', // Hindi is default!
   activeFilter: 'all',
   searchQuery: '',
-  activeStoryId: null,
   isFlutePlaying: false,
   isNarrating: false,
-  readStories: JSON.parse(localStorage.getItem('krishna_read_stories') || '[]'),
-  userNotes: JSON.parse(localStorage.getItem('krishna_user_notes') || '{}')
+  currentStoryId: 1
 };
 
-// 3. AMBIENT BACKGROUND PARTICLES
+// Hindi vs English Numeral Converter
+function formatNumber(num) {
+  if (state.lang === 'en') {
+    return num.toString(); // Strictly English 0-9
+  }
+  const hindiDigits = ['०','१','२','३','४','५','६','७','८','९'];
+  return num.toString().split('').map(d => hindiDigits[parseInt(d, 10)] || d).join('');
+}
+
+function formatBadgeNumber(num) {
+  const formatted = num < 10 ? '0' + num : num.toString();
+  if (state.lang === 'en') {
+    return formatted; // e.g. "01", "02"
+  }
+  const hindiDigits = ['०','१','२','३','४','५','६','७','८','९'];
+  return formatted.split('').map(d => hindiDigits[parseInt(d, 10)] || d).join('');
+}
+
+// 4. DIVINE FLUTE AUDIO PLAYER (True Autoplay immediately on load)
+let fluteAudio = null;
+
+function initFluteAudio() {
+  if (!fluteAudio) {
+    fluteAudio = document.getElementById('bgFluteAudio');
+    if (!fluteAudio) {
+      fluteAudio = new Audio('assets/divine_flute.mp3');
+      fluteAudio.id = 'bgFluteAudio';
+      fluteAudio.loop = true;
+      fluteAudio.preload = 'auto';
+      document.body.appendChild(fluteAudio);
+    }
+    fluteAudio.volume = 0.35; // Gentle, soothing ambient volume
+
+    // Restore playback position across in-domain page navigations
+    const savedTime = sessionStorage.getItem('flute_playback_time');
+    if (savedTime) {
+      try { fluteAudio.currentTime = parseFloat(savedTime) || 0; } catch(e){}
+    }
+
+    fluteAudio.addEventListener('play', () => {
+      state.isFlutePlaying = true;
+      updateFluteButtons(true);
+    });
+
+    fluteAudio.addEventListener('pause', () => {
+      state.isFlutePlaying = false;
+      updateFluteButtons(false);
+    });
+
+    fluteAudio.addEventListener('ended', () => {
+      state.isFlutePlaying = false;
+      updateFluteButtons(false);
+    });
+
+    window.addEventListener('beforeunload', () => {
+      if (fluteAudio) {
+        sessionStorage.setItem('flute_playback_time', fluteAudio.currentTime);
+        sessionStorage.setItem('flute_playing', state.isFlutePlaying ? 'true' : 'false');
+      }
+    });
+  }
+}
+
+// True Autoplay: Attempts to start playing immediately on initial page load
+function startAutoplayFlute() {
+  initFluteAudio();
+  if (!fluteAudio) return;
+
+  // Immediate unmuted playback attempt
+  const playPromise = fluteAudio.play();
+  if (playPromise !== undefined) {
+    playPromise.then(() => {
+      state.isFlutePlaying = true;
+      updateFluteButtons(true);
+    }).catch((err) => {
+      // If the browser strictly restricts unmuted autoplay on initial visit:
+      // Start playback immediately in muted mode (which browsers allow 100% of the time on load)
+      fluteAudio.muted = true;
+      fluteAudio.play().then(() => {
+        state.isFlutePlaying = true;
+        updateFluteButtons(true);
+      }).catch(() => {});
+
+      // Instantly restore sound on any natural user movement (scroll, pointer movement, or touch)
+      // without requiring clicking a button or specific element!
+      const unmuteEvents = ['pointerdown', 'touchstart', 'mousemove', 'scroll', 'wheel', 'keydown'];
+      const unmuteHandler = () => {
+        if (fluteAudio) {
+          fluteAudio.muted = false;
+          fluteAudio.volume = 0.35;
+          if (fluteAudio.paused) {
+            fluteAudio.play().catch(() => {});
+          }
+          state.isFlutePlaying = true;
+          updateFluteButtons(true);
+        }
+        unmuteEvents.forEach(evt => window.removeEventListener(evt, unmuteHandler, { capture: true }));
+      };
+
+      unmuteEvents.forEach(evt => {
+        window.addEventListener(evt, unmuteHandler, { capture: true, once: true, passive: true });
+      });
+    });
+  }
+}
+
+function toggleBansuriMelody() {
+  initFluteAudio();
+  if (!fluteAudio) return;
+
+  if (state.isFlutePlaying) {
+    fluteAudio.pause();
+  } else {
+    fluteAudio.muted = false;
+    fluteAudio.volume = 0.35;
+    fluteAudio.play().catch(err => {
+      console.warn("Flute play error:", err);
+    });
+  }
+}
+
+function updateFluteButtons(isPlaying) {
+  const btn = document.getElementById('fluteAudioBtn');
+  const quickBtn = document.getElementById('quickFluteBtn');
+  const mobileFluteState = document.getElementById('mobileFluteState');
+  if (btn) btn.classList.toggle('playing', isPlaying);
+  if (quickBtn) quickBtn.classList.toggle('playing', isPlaying);
+  if (mobileFluteState) {
+    mobileFluteState.textContent = isPlaying ? 'ON' : 'OFF';
+    mobileFluteState.style.color = isPlaying ? 'var(--color-gold-bright)' : 'var(--text-muted)';
+  }
+}
+
+// 5. AUTHENTIC INDIAN SPIRITUAL STORYTELLER (Starts with "Shree Krishnaaya Namah" + Tanpura)
+let tanpuraCtx = null;
+let tanpuraOscs = [];
+let tanpuraGains = [];
+let isNarratingStory = false;
+let narrationPhrases = [];
+let currentPhraseIdx = 0;
+
+function startTanpuraDrone() {
+  try {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContext) return;
+    if (!tanpuraCtx) tanpuraCtx = new AudioContext();
+    if (tanpuraCtx.state === 'suspended') tanpuraCtx.resume();
+
+    stopTanpuraDrone();
+
+    const baseFreq = 138.59; // C#3 Sa
+    const masterGain = tanpuraCtx.createGain();
+    const now = tanpuraCtx.currentTime;
+    masterGain.gain.setValueAtTime(0.001, now);
+    masterGain.gain.linearRampToValueAtTime(0.035, now + 1.2);
+
+    const filter = tanpuraCtx.createBiquadFilter();
+    filter.type = 'lowpass';
+    filter.frequency.setValueAtTime(420, now);
+
+    const harmonics = [
+      { f: baseFreq * 1.5, type: 'sine', vol: 0.02 },
+      { f: baseFreq * 2.0, type: 'triangle', vol: 0.015 },
+      { f: baseFreq * 2.003, type: 'sine', vol: 0.012 },
+      { f: baseFreq, type: 'sine', vol: 0.028 }
+    ];
+
+    harmonics.forEach(h => {
+      const osc = tanpuraCtx.createOscillator();
+      const g = tanpuraCtx.createGain();
+      osc.type = h.type;
+      osc.frequency.setValueAtTime(h.f, now);
+      g.gain.setValueAtTime(h.vol, now);
+      osc.connect(g);
+      g.connect(filter);
+      osc.start(now);
+      tanpuraOscs.push(osc);
+      tanpuraGains.push(g);
+    });
+
+    filter.connect(masterGain);
+    masterGain.connect(tanpuraCtx.destination);
+    tanpuraGains.push(masterGain);
+  } catch(e) {
+    console.warn("Tanpura synth error:", e);
+  }
+}
+
+function stopTanpuraDrone() {
+  if (tanpuraGains.length > 0 && tanpuraCtx) {
+    const master = tanpuraGains[tanpuraGains.length - 1];
+    try { master.gain.linearRampToValueAtTime(0.001, tanpuraCtx.currentTime + 0.8); } catch(e){}
+  }
+  setTimeout(() => {
+    tanpuraOscs.forEach(o => { try { o.stop(); } catch(e){} });
+    tanpuraOscs = [];
+    tanpuraGains = [];
+  }, 900);
+}
+
+function getBestIndianVoice(lang) {
+  if (!('speechSynthesis' in window)) return null;
+  const voices = window.speechSynthesis.getVoices();
+  if (!voices || voices.length === 0) return null;
+
+  const priorityNames = [
+    'Microsoft Hemant - Hindi (India)',
+    'Microsoft Hemant Online (Natural) - Hindi (India)',
+    'Microsoft Madhur Online (Natural) - Hindi (India)',
+    'Microsoft Madhur - Hindi (India)',
+    'Microsoft Ravi Online (Natural) - English (India)',
+    'Microsoft Ravi - English (India)',
+    'Google हिन्दी',
+    'Google Indian English',
+    'Rishi',
+    'Microsoft Kalpana - Hindi (India)',
+    'Microsoft Neerja Online (Natural) - English (India)',
+    'Swara',
+    'Lekha'
+  ];
+
+  if (lang === 'hi') {
+    for (const name of priorityNames) {
+      const v = voices.find(vox => vox.name.toLowerCase().includes(name.toLowerCase()));
+      if (v) return v;
+    }
+    return voices.find(v => v.lang.startsWith('hi')) || null;
+  } else {
+    for (const name of priorityNames) {
+      const v = voices.find(vox => vox.name.toLowerCase().includes(name.toLowerCase()));
+      if (v) return v;
+    }
+    return voices.find(v => v.lang === 'en-IN' || (v.lang.startsWith('en') && v.name.toLowerCase().includes('india'))) || voices[0] || null;
+  }
+}
+
+// Begins with "Shree Krishnaaya Namah" naturally integrated!
+function toggleStoryNarration(story) {
+  if (!('speechSynthesis' in window)) {
+    alert("Speech synthesis is not supported in this browser.");
+    return;
+  }
+
+  if (isNarratingStory) {
+    stopStoryNarration();
+    return;
+  }
+
+  window.speechSynthesis.cancel();
+  isNarratingStory = true;
+  updateNarrationButtons(true);
+  startTanpuraDrone();
+
+  const lang = state.lang;
+  const indianVoice = getBestIndianVoice(lang);
+
+  // Every narration strictly begins with "Shree Krishnaaya Namah"
+  const openingInvocation = lang === 'hi' 
+    ? "॥ श्री कृष्णाय नमः ॥" 
+    : "Shree Krishnaaya Namah.";
+
+  const storyIntro = lang === 'hi'
+    ? `आज की पावन कथा है, ${story.title[lang]}।`
+    : `Today's sacred story is, ${story.title[lang]}.`;
+
+  const rawAbout = story.about[lang].replace(/\n\n/g, '. ');
+  const rawSentences = rawAbout.split(/[।.!?]+/).map(s => s.trim()).filter(s => s.length > 0);
+
+  const lessonIntro = lang === 'hi'
+    ? "इस लीला से हमारे जीवन की पावन सीख है:"
+    : "The timeless lesson from this divine leela:";
+
+  const rawLesson = story.lesson[lang].replace(/\n\n/g, '. ');
+  const lessonSentences = rawLesson.split(/[।.!?]+/).map(s => s.trim()).filter(s => s.length > 0);
+
+  narrationPhrases = [
+    openingInvocation,
+    storyIntro,
+    ...rawSentences,
+    lessonIntro,
+    story.lessonHighlight[lang],
+    ...lessonSentences,
+    lang === 'hi' ? "॥ जय श्री कृष्ण ॥" : "Jai Shree Krishna."
+  ];
+
+  currentPhraseIdx = 0;
+
+  function speakNext() {
+    if (!isNarratingStory) return;
+
+    if (currentPhraseIdx >= narrationPhrases.length) {
+      stopStoryNarration();
+      return;
+    }
+
+    const phrase = narrationPhrases[currentPhraseIdx];
+    currentPhraseIdx++;
+
+    const utterance = new SpeechSynthesisUtterance(phrase);
+    if (indianVoice) utterance.voice = indianVoice;
+    utterance.lang = lang === 'hi' ? 'hi-IN' : 'en-IN';
+
+    // Warm, deep, unhurried elder satsang tempo
+    utterance.pitch = lang === 'hi' ? 0.88 : 0.90;
+    utterance.rate = lang === 'hi' ? 0.82 : 0.84;
+    utterance.volume = 1.0;
+
+    utterance.onend = () => {
+      if (!isNarratingStory) return;
+      const pauseTime = phrase.includes("Namah") || phrase.includes("नमः") || phrase.includes("सीख") || phrase.includes("lesson") ? 750 : 450;
+      setTimeout(speakNext, pauseTime);
+    };
+
+    utterance.onerror = () => {
+      if (isNarratingStory) setTimeout(speakNext, 300);
+    };
+
+    window.speechSynthesis.speak(utterance);
+  }
+
+  setTimeout(speakNext, 600);
+}
+
+function stopStoryNarration() {
+  isNarratingStory = false;
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+  }
+  stopTanpuraDrone();
+  updateNarrationButtons(false);
+}
+
+function updateNarrationButtons(isSpeaking) {
+  const btn = document.getElementById('storyPageNarrateBtn');
+  const icon = document.getElementById('narrateBtnIcon');
+  const text = document.getElementById('narrateBtnText');
+  if (!btn) return;
+
+  btn.classList.toggle('speaking', isSpeaking);
+  if (icon) icon.textContent = isSpeaking ? '⏹️' : '🔊';
+  if (text) {
+    text.textContent = isSpeaking 
+      ? (state.lang === 'hi' ? 'कथा वाचन जारी है...' : 'Narrating Katha...')
+      : (state.lang === 'hi' ? 'कथा सुनें' : 'Listen Story');
+  }
+}
+
+// 6. RENDER HOMEPAGE STORIES GRID (Links directly to story.html?id=X)
+function renderHomepageStories() {
+  const grid = document.getElementById('storiesGrid');
+  if (!grid) return;
+
+  const lang = state.lang;
+  const filtered = STORIES_DATA.filter(story => {
+    if (state.activeFilter !== 'all' && story.theme !== state.activeFilter) {
+      return false;
+    }
+    if (state.searchQuery) {
+      const q = state.searchQuery.toLowerCase();
+      const matchTitle = (story.title.en + " " + story.title.hi).toLowerCase().includes(q);
+      const matchSub = (story.subtitle.en + " " + story.subtitle.hi).toLowerCase().includes(q);
+      const matchAbout = (story.about.en + " " + story.about.hi).toLowerCase().includes(q);
+      return matchTitle || matchSub || matchAbout;
+    }
+    return true;
+  });
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
+        <p style="font-size: 1.1rem; color: var(--text-ivory); margin-bottom: 0.5rem;">${lang === 'hi' ? 'कोई कथा नहीं मिली' : 'No stories found'}</p>
+        <p style="font-size: 0.9rem;">${lang === 'hi' ? 'कृपया दूसरा शब्द खोजें या सभी कथाएँ देखें।' : 'Please search another keyword or view all stories.'}</p>
+      </div>
+    `;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(story => {
+    const themeName = TRANSLATIONS[lang]['cat_' + story.theme + '_title'] || story.theme;
+    const numDisplay = formatBadgeNumber(story.id);
+
+    return `
+      <a href="story.html?id=${story.id}" class="story-card-link" title="${story.title[lang]}">
+        <article class="story-card">
+          <div>
+            <div class="card-top-meta">
+              <span class="card-number-badge">#${numDisplay}</span>
+              <span class="card-theme-tag theme-tag-${story.theme}">${themeName}</span>
+            </div>
+
+            <div class="card-title-group">
+              <h3>${story.title[lang]}</h3>
+              <span class="card-title-en">${story.subtitle[lang]}</span>
+            </div>
+
+            <p class="card-story-preview">${story.about[lang].replace(/\n\n/g, ' ')}</p>
+          </div>
+
+          <div>
+            <div class="card-lesson-highlight">
+              <span class="lesson-badge-label">${TRANSLATIONS[lang].lesson_tag}</span>
+              <p>${story.lessonHighlight[lang]}</p>
+            </div>
+
+            <div class="card-action-bar">
+              <span class="card-read-btn">${TRANSLATIONS[lang].read_more_btn}</span>
+            </div>
+          </div>
+        </article>
+      </a>
+    `;
+  }).join('');
+}
+
+// 7. DEDICATED STORY WEBPAGE LOGIC (story.html)
+function initStoryPage() {
+  const mainTitle = document.getElementById('storyMainTitle');
+  if (!mainTitle) return; // Not on story page
+
+  const params = new URLSearchParams(window.location.search);
+  const storyId = parseInt(params.get('id'), 10) || window.__STORY_ID__ || 1;
+  state.currentStoryId = storyId;
+
+  const story = STORIES_DATA.find(s => s.id === storyId) || STORIES_DATA[0];
+  const lang = state.lang;
+
+  // Title & Metadata
+  document.title = `${story.title[lang]} | Krishna Leelas`;
+  mainTitle.textContent = story.title[lang];
+  document.getElementById('storyMainSubtitle').textContent = story.subtitle[lang];
+
+  // Number Badge (Strict English digits in English mode)
+  const numDisplay = formatBadgeNumber(story.id);
+  document.getElementById('storyNumberBadge').textContent = lang === 'hi' ? `कथा #${numDisplay}` : `Story #${numDisplay}`;
+
+  // Category Pill
+  const categoryTitle = TRANSLATIONS[lang]['cat_' + story.theme + '_title'] || story.theme;
+  const categoryPill = document.getElementById('storyCategoryPill');
+  categoryPill.textContent = categoryTitle;
+  categoryPill.className = `story-category-pill theme-tag-${story.theme}`;
+  categoryPill.href = `category.html?theme=${story.theme}`;
+
+  // Breadcrumb
+  document.getElementById('breadcrumbCategory').textContent = categoryTitle;
+  document.getElementById('breadcrumbTitle').textContent = story.title[lang];
+
+  // 1:1 Image Placeholder
+  const customImg = document.getElementById('storyCustomImg');
+  const placeholderArt = document.getElementById('storyArtPlaceholder');
+  if (story.image) {
+    customImg.src = story.image;
+    customImg.style.display = 'block';
+    if (placeholderArt) placeholderArt.style.display = 'none';
+  } else {
+    customImg.src = '';
+    customImg.style.display = 'none';
+    if (placeholderArt) placeholderArt.style.display = 'flex';
+  }
+
+  // Story Paragraphs
+  const paragraphsHtml = story.about[lang].split('\n\n').map(p => `<p>${p}</p>`).join('');
+  document.getElementById('storyTextParagraphs').innerHTML = paragraphsHtml;
+
+  // Lesson Card
+  document.getElementById('storyLessonHighlight').textContent = story.lessonHighlight[lang];
+  document.getElementById('storyLessonExplanation').innerHTML = story.lesson[lang].replace(/\n\n/g, '<br><br>');
+
+  // Navigation Buttons
+  const prevId = story.id === 1 ? STORIES_DATA.length : story.id - 1;
+  const nextId = story.id === STORIES_DATA.length ? 1 : story.id + 1;
+  document.getElementById('prevStoryPageBtn').href = `story.html?id=${prevId}`;
+  document.getElementById('nextStoryPageBtn').href = `story.html?id=${nextId}`;
+
+  // Lightbox Image expansion on 1:1 frame click
+  const frameWrapper = document.getElementById('storyImageWrapper');
+  if (frameWrapper) {
+    frameWrapper.onclick = () => openLightbox(story);
+  }
+
+  // Audio Narrator
+  const narrateBtn = document.getElementById('storyPageNarrateBtn');
+  if (narrateBtn) {
+    narrateBtn.onclick = () => toggleStoryNarration(story);
+  }
+}
+
+// 8. DEDICATED CATEGORY WEBPAGE LOGIC (category.html)
+function initCategoryPage() {
+  const categoryTitleEl = document.getElementById('categoryPageTitle');
+  if (!categoryTitleEl) return; // Not on category page
+
+  const params = new URLSearchParams(window.location.search);
+  const theme = params.get('theme') || 'love';
+  const lang = state.lang;
+
+  const validTheme = ['love', 'friendship', 'courage', 'wisdom'].includes(theme) ? theme : 'love';
+
+  const icons = {
+    love: '🪷',
+    friendship: '🤝',
+    courage: '🛡️',
+    wisdom: '☀️'
+  };
+
+  const titleKey = 'cat_' + validTheme + '_title';
+  const descKey = 'cat_' + validTheme + '_desc';
+
+  document.title = `${TRANSLATIONS[lang][titleKey]} | Krishna Leelas`;
+  categoryTitleEl.textContent = TRANSLATIONS[lang][titleKey];
+  document.getElementById('categoryPageDesc').textContent = TRANSLATIONS[lang][descKey];
+  document.getElementById('categoryIconGlyph').textContent = icons[validTheme] || '🪷';
+  document.getElementById('categoryBreadcrumbTitle').textContent = TRANSLATIONS[lang][titleKey];
+
+  // Active Tab Highlight
+  ['Love', 'Friendship', 'Courage', 'Wisdom'].forEach(t => {
+    const tabEl = document.getElementById('tab' + t);
+    if (tabEl) {
+      tabEl.classList.toggle('active', t.toLowerCase() === validTheme);
+    }
+  });
+
+  // Render Category Stories
+  const grid = document.getElementById('categoryStoriesGrid');
+  const catStories = STORIES_DATA.filter(s => s.theme === validTheme);
+
+  grid.innerHTML = catStories.map(story => {
+    const themeName = TRANSLATIONS[lang]['cat_' + story.theme + '_title'] || story.theme;
+    const numDisplay = formatBadgeNumber(story.id);
+
+    return `
+      <a href="story.html?id=${story.id}" class="story-card-link" title="${story.title[lang]}">
+        <article class="story-card">
+          <div>
+            <div class="card-top-meta">
+              <span class="card-number-badge">#${numDisplay}</span>
+              <span class="card-theme-tag theme-tag-${story.theme}">${themeName}</span>
+            </div>
+
+            <div class="card-title-group">
+              <h3>${story.title[lang]}</h3>
+              <span class="card-title-en">${story.subtitle[lang]}</span>
+            </div>
+
+            <p class="card-story-preview">${story.about[lang].replace(/\n\n/g, ' ')}</p>
+          </div>
+
+          <div>
+            <div class="card-lesson-highlight">
+              <span class="lesson-badge-label">${TRANSLATIONS[lang].lesson_tag}</span>
+              <p>${story.lessonHighlight[lang]}</p>
+            </div>
+
+            <div class="card-action-bar">
+              <span class="card-read-btn">${TRANSLATIONS[lang].read_more_btn}</span>
+            </div>
+          </div>
+        </article>
+      </a>
+    `;
+  }).join('');
+}
+
+// 9. FULL-SCREEN LIGHTBOX VIEWER
+function openLightbox(story) {
+  const modal = document.getElementById('imageLightboxModal');
+  if (!modal) return;
+
+  const lang = state.lang;
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxPlaceholder = document.getElementById('lightboxPlaceholder');
+  const caption = document.getElementById('lightboxCaption');
+
+  caption.textContent = `${story.title[lang]} • ${TRANSLATIONS[lang].darshan_caption}`;
+
+  if (story.image) {
+    lightboxImg.src = story.image;
+    lightboxImg.style.display = 'block';
+    if (lightboxPlaceholder) lightboxPlaceholder.style.display = 'none';
+  } else {
+    lightboxImg.src = '';
+    lightboxImg.style.display = 'none';
+    if (lightboxPlaceholder) lightboxPlaceholder.style.display = 'flex';
+  }
+
+  modal.classList.add('active');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  const modal = document.getElementById('imageLightboxModal');
+  if (!modal) return;
+  modal.classList.remove('active');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+// 10. BILINGUAL LANGUAGE CONTROLLER (Strict English Numerals in English Mode)
+function switchLanguage(newLang) {
+  state.lang = newLang;
+  localStorage.setItem('krishna_lang', newLang);
+  document.documentElement.setAttribute('lang', newLang);
+  document.documentElement.setAttribute('data-lang', newLang);
+
+  const hiTag = document.getElementById('langHi');
+  const enTag = document.getElementById('langEn');
+  if (hiTag && enTag) {
+    hiTag.classList.toggle('active-lang', newLang === 'hi');
+    enTag.classList.toggle('active-lang', newLang === 'en');
+  }
+
+  // Update text translations
+  const elements = document.querySelectorAll('[data-i18n]');
+  elements.forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (TRANSLATIONS[newLang] && TRANSLATIONS[newLang][key]) {
+      el.innerHTML = TRANSLATIONS[newLang][key];
+    }
+  });
+
+  const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+  placeholders.forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (TRANSLATIONS[newLang] && TRANSLATIONS[newLang][key]) {
+      el.setAttribute('placeholder', TRANSLATIONS[newLang][key]);
+    }
+  });
+
+  // Update statistics values (Strict English digits 16, 4 in English mode)
+  const statStories = document.querySelector('[data-stat="stories"]');
+  if (statStories) statStories.textContent = formatNumber(16);
+
+  const statThemes = document.querySelector('[data-stat="themes"]');
+  if (statThemes) statThemes.textContent = formatNumber(4);
+
+  // Re-render current page
+  renderHomepageStories();
+  initStoryPage();
+  initCategoryPage();
+}
+
+// 11. AMBIENT BACKGROUND PARTICLES
 function initAmbientCanvas() {
   const canvas = document.getElementById('ambientCanvas');
   if (!canvas) return;
@@ -584,15 +1232,15 @@ function initAmbientCanvas() {
   });
 
   const particles = [];
-  const particleCount = Math.min(width > 768 ? 60 : 25, 75);
+  const particleCount = Math.min(width > 768 ? 55 : 22, 60);
 
   for (let i = 0; i < particleCount; i++) {
     particles.push({
       x: Math.random() * width,
       y: Math.random() * height,
       size: Math.random() * 2 + 0.8,
-      speedY: -(Math.random() * 0.4 + 0.15),
-      speedX: (Math.random() - 0.5) * 0.25,
+      speedY: -(Math.random() * 0.35 + 0.12),
+      speedX: (Math.random() - 0.5) * 0.2,
       opacity: Math.random() * 0.6 + 0.2,
       pulseSpeed: Math.random() * 0.02 + 0.008,
       colorType: Math.random() > 0.4 ? 'gold' : 'blue'
@@ -601,16 +1249,12 @@ function initAmbientCanvas() {
 
   function render() {
     ctx.clearRect(0, 0, width, height);
-
     for (let p of particles) {
       p.y += p.speedY;
       p.x += p.speedX;
       p.opacity += Math.sin(Date.now() * p.pulseSpeed) * 0.005;
 
-      if (p.y < -10) {
-        p.y = height + 10;
-        p.x = Math.random() * width;
-      }
+      if (p.y < -10) { p.y = height + 10; p.x = Math.random() * width; }
       if (p.x < -10) p.x = width + 10;
       if (p.x > width + 10) p.x = -10;
 
@@ -634,467 +1278,87 @@ function initAmbientCanvas() {
   render();
 }
 
-// 4. DIVINE BANSURI AUDIO PLAYER (Custom MP3 with loop & fallback)
-// The user can replace this audio anytime by swapping assets/divine_flute.mp3
-let fluteAudio = null;
+// 12. SETUP EVENT LISTENERS & INITIALIZATION
 
-function initFluteAudio() {
-  if (fluteAudio) return;
-  fluteAudio = new Audio('assets/divine_flute.mp3');
-  fluteAudio.loop = true;
-  fluteAudio.preload = 'auto';
+// Setup Mobile Hamburger Dropdown Menu
+function setupMobileMenu() {
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const dropdownMenu = document.getElementById('mobileDropdownMenu');
+  if (!menuBtn || !dropdownMenu) return;
 
-  fluteAudio.addEventListener('play', () => {
-    state.isFlutePlaying = true;
-    updateFluteButtons(true);
-  });
-
-  fluteAudio.addEventListener('pause', () => {
-    state.isFlutePlaying = false;
-    updateFluteButtons(false);
-  });
-
-  fluteAudio.addEventListener('ended', () => {
-    state.isFlutePlaying = false;
-    updateFluteButtons(false);
-  });
-
-  fluteAudio.addEventListener('error', (err) => {
-    console.warn("Audio file error, falling back to synth:", err);
-    if (state.isFlutePlaying) {
-      startSynthFallback();
+  function toggleMenu() {
+    const isOpen = dropdownMenu.classList.contains('open');
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
     }
+  }
+
+  function openMenu() {
+    dropdownMenu.classList.add('open');
+    menuBtn.classList.add('open');
+    menuBtn.setAttribute('aria-expanded', 'true');
+    dropdownMenu.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeMenu() {
+    dropdownMenu.classList.remove('open');
+    menuBtn.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    dropdownMenu.setAttribute('aria-hidden', 'true');
+  }
+
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
   });
-}
 
-function toggleBansuriMelody() {
-  initFluteAudio();
-  if (!fluteAudio) return;
-
-  if (state.isFlutePlaying) {
-    fluteAudio.pause();
-  } else {
-    fluteAudio.play().catch(err => {
-      console.warn("Autoplay / Audio error, falling back to synth:", err);
-      startSynthFallback();
+  const mobileNavItems = dropdownMenu.querySelectorAll('.mobile-nav-item');
+  mobileNavItems.forEach(item => {
+    item.addEventListener('click', () => {
+      closeMenu();
     });
-  }
-}
-
-// Fallback Web Audio Synthesizer in case MP3 file is unavailable
-let audioCtx = null;
-let droneOsc = null;
-let droneGain = null;
-let melodyInterval = null;
-
-function startSynthFallback() {
-  try {
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    if (!AudioContext) return;
-    if (!audioCtx) audioCtx = new AudioContext();
-    if (audioCtx.state === 'suspended') audioCtx.resume();
-
-    const baseFreq = 146.83;
-    droneGain = audioCtx.createGain();
-    droneGain.gain.setValueAtTime(0.04, audioCtx.currentTime);
-
-    const osc1 = audioCtx.createOscillator();
-    osc1.type = 'sawtooth';
-    osc1.frequency.setValueAtTime(baseFreq, audioCtx.currentTime);
-
-    const osc2 = audioCtx.createOscillator();
-    osc2.type = 'sine';
-    osc2.frequency.setValueAtTime(baseFreq * 1.5, audioCtx.currentTime);
-
-    const filter = audioCtx.createBiquadFilter();
-    filter.type = 'lowpass';
-    filter.frequency.setValueAtTime(320, audioCtx.currentTime);
-
-    osc1.connect(filter);
-    osc2.connect(filter);
-    filter.connect(droneGain);
-    droneGain.connect(audioCtx.destination);
-
-    osc1.start();
-    osc2.start();
-    droneOsc = [osc1, osc2];
-
-    const bhupaliFreqs = [293.66, 329.63, 369.99, 440.00, 493.88, 587.33, 493.88, 440.00, 369.99, 329.63];
-    let noteIdx = 0;
-
-    function playFluteNote(freq, duration) {
-      if (!state.isFlutePlaying || !audioCtx) return;
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      const breathFilter = audioCtx.createBiquadFilter();
-
-      osc.type = 'triangle';
-      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-
-      const vibrato = audioCtx.createOscillator();
-      const vibratoGain = audioCtx.createGain();
-      vibrato.frequency.setValueAtTime(5.2, audioCtx.currentTime);
-      vibratoGain.gain.setValueAtTime(freq * 0.015, audioCtx.currentTime);
-      vibrato.connect(osc.frequency);
-      vibrato.start();
-
-      breathFilter.type = 'lowpass';
-      breathFilter.frequency.setValueAtTime(1400, audioCtx.currentTime);
-
-      const now = audioCtx.currentTime;
-      gain.gain.setValueAtTime(0.001, now);
-      gain.gain.exponentialRampToValueAtTime(0.09, now + 0.4);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + duration);
-
-      osc.connect(breathFilter);
-      breathFilter.connect(gain);
-      gain.connect(audioCtx.destination);
-
-      osc.start(now);
-      osc.stop(now + duration + 0.1);
-      vibrato.stop(now + duration + 0.1);
-    }
-
-    melodyInterval = setInterval(() => {
-      const note = bhupaliFreqs[noteIdx % bhupaliFreqs.length];
-      const duration = 2.4 + Math.random() * 0.8;
-      playFluteNote(note, duration);
-      noteIdx = (noteIdx + 1 + Math.floor(Math.random() * 2)) % bhupaliFreqs.length;
-    }, 2800);
-
-    playFluteNote(bhupaliFreqs[0], 2.8);
-
-    state.isFlutePlaying = true;
-    updateFluteButtons(true);
-  } catch (err) {
-    console.warn("Synth fallback error:", err);
-  }
-}
-
-function stopBansuriMelody() {
-  if (fluteAudio && !fluteAudio.paused) {
-    fluteAudio.pause();
-  }
-  if (melodyInterval) {
-    clearInterval(melodyInterval);
-    melodyInterval = null;
-  }
-  if (droneOsc) {
-    droneOsc.forEach(osc => {
-      try { osc.stop(); } catch(e){}
-    });
-    droneOsc = null;
-  }
-  state.isFlutePlaying = false;
-  updateFluteButtons(false);
-}
-
-function updateFluteButtons(isPlaying) {
-  const btn = document.getElementById('fluteAudioBtn');
-  const quickBtn = document.getElementById('quickFluteBtn');
-  if (btn) btn.classList.toggle('playing', isPlaying);
-  if (quickBtn) quickBtn.classList.toggle('playing', isPlaying);
-}
-
-// 5. TEXT-TO-SPEECH NARRATION
-function toggleStoryNarration(story) {
-  if (!('speechSynthesis' in window)) {
-    alert("Speech Synthesis is not supported in this browser.");
-    return;
-  }
-
-  if (state.isNarrating) {
-    window.speechSynthesis.cancel();
-    state.isNarrating = false;
-    updateNarrateButton(false);
-    return;
-  }
-
-  const lang = state.lang;
-  const title = story.title[lang];
-  const about = story.about[lang];
-  const lessonHighlight = story.lessonHighlight[lang];
-  const lesson = story.lesson[lang];
-  const fullText = `${title}. ${about}. ${TRANSLATIONS[lang].lesson_tag} ${lessonHighlight}. ${lesson}`;
-
-  const utterance = new SpeechSynthesisUtterance(fullText);
-  utterance.lang = lang === 'hi' ? 'hi-IN' : 'en-US';
-  utterance.rate = 0.92;
-  utterance.pitch = 1.0;
-
-  utterance.onend = () => {
-    state.isNarrating = false;
-    updateNarrateButton(false);
-  };
-  utterance.onerror = () => {
-    state.isNarrating = false;
-    updateNarrateButton(false);
-  };
-
-  window.speechSynthesis.speak(utterance);
-  state.isNarrating = true;
-  updateNarrateButton(true);
-}
-
-function updateNarrateButton(isSpeaking) {
-  const btn = document.getElementById('narrateBtn');
-  const icon = document.getElementById('narrateIcon');
-  const text = document.getElementById('narrateText');
-  if (!btn) return;
-  btn.classList.toggle('speaking', isSpeaking);
-  if (icon) icon.textContent = isSpeaking ? '⏹️' : '🔊';
-  if (text) {
-    text.textContent = isSpeaking 
-      ? TRANSLATIONS[state.lang].listening_active 
-      : TRANSLATIONS[state.lang].listen_story_btn;
-  }
-}
-
-// 6. RENDER STORY CARDS (ZERO EMOJIS, HIGH READABILITY)
-function renderStories() {
-  const grid = document.getElementById('storiesGrid');
-  if (!grid) return;
-
-  const lang = state.lang;
-  const filtered = STORIES_DATA.filter(story => {
-    if (state.activeFilter !== 'all' && story.theme !== state.activeFilter) {
-      return false;
-    }
-    if (state.searchQuery) {
-      const q = state.searchQuery.toLowerCase();
-      const matchTitle = (story.title.en + " " + story.title.hi).toLowerCase().includes(q);
-      const matchSub = (story.subtitle.en + " " + story.subtitle.hi).toLowerCase().includes(q);
-      const matchAbout = (story.about.en + " " + story.about.hi).toLowerCase().includes(q);
-      const matchLesson = (story.lesson.en + " " + story.lesson.hi).toLowerCase().includes(q);
-      return matchTitle || matchSub || matchAbout || matchLesson;
-    }
-    return true;
   });
 
-  if (filtered.length === 0) {
-    grid.innerHTML = `
-      <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
-        <p style="font-size: 1.1rem; color: var(--text-ivory); margin-bottom: 0.5rem;">${lang === 'hi' ? 'कोई कथा नहीं मिली' : 'No stories found'}</p>
-        <p style="font-size: 0.9rem;">${lang === 'hi' ? 'कृपया दूसरा शब्द खोजें या सभी कथाएँ देखें।' : 'Please try searching another term or view all stories.'}</p>
-      </div>
-    `;
-    return;
-  }
-
-  const hindiNums = ['०','१','२','३','४','५','६','७','८','९','१०','११','१२','१३','१४','१५','१६'];
-
-  grid.innerHTML = filtered.map(story => {
-    const isRead = state.readStories.includes(story.id);
-    const themeKey = 'filter_' + story.theme;
-    const themeName = TRANSLATIONS[lang][themeKey] || story.theme;
-    const readStatusText = isRead 
-      ? `<span class="read-status-indicator read">✓ ${TRANSLATIONS[lang].marked_as_read}</span>`
-      : `<span class="read-status-indicator">○ ${lang === 'hi' ? 'अपठित' : 'Unread'}</span>`;
-
-    const numDisplay = lang === 'hi' ? (hindiNums[story.id] || story.id) : (story.id < 10 ? '0' + story.id : story.id);
-
-    return `
-      <article class="story-card" data-id="${story.id}" onclick="openStoryModal(${story.id})">
-        <div>
-          <div class="card-top-meta">
-            <span class="card-number-badge">#${numDisplay}</span>
-            <span class="card-theme-tag theme-tag-${story.theme}">${themeName}</span>
-          </div>
-
-          <div class="card-title-group">
-            <h3>${story.title[lang]}</h3>
-            <span class="card-title-en">${story.subtitle[lang]}</span>
-          </div>
-
-          <p class="card-story-preview">${story.about[lang].replace(/\n\n/g, ' ')}</p>
-        </div>
-
-        <div>
-          <div class="card-lesson-highlight">
-            <span class="lesson-badge-label">${TRANSLATIONS[lang].lesson_tag}</span>
-            <p>${story.lessonHighlight[lang]}</p>
-          </div>
-
-          <div class="card-action-bar">
-            ${readStatusText}
-            <span class="card-read-btn">${TRANSLATIONS[lang].read_more_btn}</span>
-          </div>
-        </div>
-      </article>
-    `;
-  }).join('');
-
-  updateReadCounter();
-}
-
-// 7. STORY MODAL READER (ZERO EMOJIS, MOBILE BOTTOM SHEET)
-function openStoryModal(id) {
-  const story = STORIES_DATA.find(s => s.id === id);
-  if (!story) return;
-
-  state.activeStoryId = id;
-  const lang = state.lang;
-  const modal = document.getElementById('storyModal');
-  if (!modal) return;
-
-  if (state.isNarrating) {
-    window.speechSynthesis.cancel();
-    state.isNarrating = false;
-    updateNarrateButton(false);
-  }
-
-  const hindiNums = ['०','१','२','३','४','५','६','७','८','९','१०','११','१२','१३','१४','१५','१६'];
-  const numDisplay = lang === 'hi' ? (hindiNums[story.id] || story.id) : (story.id < 10 ? '0' + story.id : story.id);
-
-  document.getElementById('modalNumberBadge').textContent = lang === 'hi' ? `कथा #${numDisplay}` : `Story #${numDisplay}`;
-  const themeName = TRANSLATIONS[lang]['filter_' + story.theme] || story.theme;
-  document.getElementById('modalThemeBadge').textContent = themeName;
-  document.getElementById('modalTitle').textContent = story.title[lang];
-  document.getElementById('modalSubtitle').textContent = story.subtitle[lang];
-
-  const paragraphs = story.about[lang].split('\n\n').map(p => `<p>${p}</p>`).join('');
-  document.getElementById('modalStoryText').innerHTML = paragraphs;
-
-  document.getElementById('modalLessonText').innerHTML = `
-    <div style="margin-bottom: 0.65rem; font-size: 1.15rem; font-weight: 700; color: var(--color-gold);">
-      ${story.lessonHighlight[lang]}
-    </div>
-    <div style="font-size: 0.98rem; line-height: 1.7; color: var(--text-ivory);">
-      ${story.lesson[lang].replace(/\n\n/g, '<br><br>')}
-    </div>
-  `;
-
-  const noteInput = document.getElementById('userStoryNoteInput');
-  const noteStatus = document.getElementById('noteSaveStatus');
-  noteInput.value = state.userNotes[story.id] || '';
-  noteStatus.textContent = '';
-
-  updateModalReadButton(story.id);
-
-  const narrateBtn = document.getElementById('narrateBtn');
-  narrateBtn.onclick = () => toggleStoryNarration(story);
-
-  modal.classList.add('active');
-  modal.setAttribute('aria-hidden', 'false');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeStoryModal() {
-  const modal = document.getElementById('storyModal');
-  if (!modal) return;
-
-  if (state.isNarrating) {
-    window.speechSynthesis.cancel();
-    state.isNarrating = false;
-    updateNarrateButton(false);
-  }
-
-  modal.classList.remove('active');
-  modal.setAttribute('aria-hidden', 'true');
-  document.body.style.overflow = '';
-  state.activeStoryId = null;
-}
-
-function updateModalReadButton(id) {
-  const btn = document.getElementById('markReadBtn');
-  const icon = document.getElementById('markReadIcon');
-  const text = document.getElementById('markReadText');
-  const isRead = state.readStories.includes(id);
-
-  if (!btn) return;
-  btn.classList.toggle('is-read', isRead);
-  if (icon) icon.textContent = isRead ? '✓' : '○';
-  if (text) {
-    text.textContent = isRead 
-      ? TRANSLATIONS[state.lang].marked_as_read 
-      : TRANSLATIONS[state.lang].mark_read;
-  }
-}
-
-function toggleMarkReadCurrentStory() {
-  if (!state.activeStoryId) return;
-  const id = state.activeStoryId;
-  const idx = state.readStories.indexOf(id);
-
-  if (idx > -1) {
-    state.readStories.splice(idx, 1);
-  } else {
-    state.readStories.push(id);
-  }
-
-  localStorage.setItem('krishna_read_stories', JSON.stringify(state.readStories));
-  updateModalReadButton(id);
-  renderStories();
-}
-
-function saveUserNote() {
-  if (!state.activeStoryId) return;
-  const noteInput = document.getElementById('userStoryNoteInput');
-  const noteStatus = document.getElementById('noteSaveStatus');
-  const val = noteInput.value.trim();
-
-  state.userNotes[state.activeStoryId] = val;
-  localStorage.setItem('krishna_user_notes', JSON.stringify(state.userNotes));
-  noteStatus.textContent = TRANSLATIONS[state.lang].note_saved_msg;
-  setTimeout(() => { noteStatus.textContent = ''; }, 2500);
-}
-
-function navigateModalStory(step) {
-  if (!state.activeStoryId) return;
-  let newId = state.activeStoryId + step;
-  if (newId < 1) newId = STORIES_DATA.length;
-  if (newId > STORIES_DATA.length) newId = 1;
-  openStoryModal(newId);
-}
-
-function updateReadCounter() {
-  const countEl = document.getElementById('readStoriesCount');
-  if (countEl) {
-    const hindiNums = ['०','१','२','३','४','५','६','७','८','९','१०','११','१२','१३','१४','१५','१६'];
-    const count = state.readStories.length;
-    countEl.textContent = state.lang === 'hi' ? (hindiNums[count] || count) : count;
-  }
-}
-
-// 8. BILINGUAL LANGUAGE SWITCHER
-function switchLanguage(newLang) {
-  state.lang = newLang;
-  localStorage.setItem('krishna_lang', newLang);
-  document.documentElement.setAttribute('lang', newLang);
-  document.documentElement.setAttribute('data-lang', newLang);
-
-  const hiTag = document.getElementById('langHi');
-  const enTag = document.getElementById('langEn');
-  if (hiTag && enTag) {
-    hiTag.classList.toggle('active-lang', newLang === 'hi');
-    enTag.classList.toggle('active-lang', newLang === 'en');
-  }
-
-  const elements = document.querySelectorAll('[data-i18n]');
-  elements.forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (TRANSLATIONS[newLang] && TRANSLATIONS[newLang][key]) {
-      el.innerHTML = TRANSLATIONS[newLang][key];
+  document.addEventListener('click', (e) => {
+    const header = document.querySelector('.site-header');
+    if (header && !header.contains(e.target)) {
+      closeMenu();
     }
   });
 
-  const placeholderEls = document.querySelectorAll('[data-i18n-placeholder]');
-  placeholderEls.forEach(el => {
-    const key = el.getAttribute('data-i18n-placeholder');
-    if (TRANSLATIONS[newLang] && TRANSLATIONS[newLang][key]) {
-      el.setAttribute('placeholder', TRANSLATIONS[newLang][key]);
-    }
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
   });
 
-  renderStories();
+  // Scrollspy to highlight active nav links
+  window.addEventListener('scroll', () => {
+    const sections = ['hero', 'stories', 'life-lessons'];
+    const scrollPos = window.scrollY + 140;
 
-  if (state.activeStoryId) {
-    openStoryModal(state.activeStoryId);
-  }
+    for (let id of sections) {
+      const sec = document.getElementById(id);
+      if (sec) {
+        const top = sec.offsetTop;
+        const height = sec.offsetHeight;
+        if (scrollPos >= top && scrollPos < top + height) {
+          document.querySelectorAll('.desktop-nav-links .nav-link').forEach(link => {
+            const href = link.getAttribute('href');
+            link.classList.toggle('active', href.endsWith('#' + id));
+          });
+          document.querySelectorAll('.mobile-dropdown-menu .mobile-nav-item').forEach(link => {
+            link.classList.toggle('active', link.getAttribute('data-nav') === id);
+          });
+          break;
+        }
+      }
+    }
+  }, { passive: true });
 }
 
-// 9. EVENT LISTENERS SETUP
-function setupEventListeners() {
+function setupGlobalEvents() {
+  setupMobileMenu();
   const fluteBtn = document.getElementById('fluteAudioBtn');
   if (fluteBtn) fluteBtn.addEventListener('click', toggleBansuriMelody);
 
@@ -1109,30 +1373,33 @@ function setupEventListeners() {
     });
   }
 
+  // Header scroll shadow
   window.addEventListener('scroll', () => {
     const header = document.querySelector('.site-header');
     if (header) {
-      header.classList.toggle('scrolled', window.scrollY > 40);
+      header.classList.toggle('scrolled', window.scrollY > 30);
     }
   });
 
-  const filterTabs = document.querySelectorAll('.filter-tab');
+  // Homepage filter tabs
+  const filterTabs = document.querySelectorAll('.filter-tab[data-filter]');
   filterTabs.forEach(tab => {
     tab.addEventListener('click', () => {
       filterTabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
       state.activeFilter = tab.getAttribute('data-filter');
-      renderStories();
+      renderHomepageStories();
     });
   });
 
+  // Search input
   const searchInput = document.getElementById('storySearchInput');
   const clearBtn = document.getElementById('clearSearchBtn');
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       state.searchQuery = e.target.value.trim();
       if (clearBtn) clearBtn.classList.toggle('show', state.searchQuery.length > 0);
-      renderStories();
+      renderHomepageStories();
     });
   }
   if (clearBtn) {
@@ -1140,47 +1407,35 @@ function setupEventListeners() {
       if (searchInput) searchInput.value = '';
       state.searchQuery = '';
       clearBtn.classList.remove('show');
-      renderStories();
+      renderHomepageStories();
     });
   }
 
-  const closeBtn = document.getElementById('closeModalBtn');
-  if (closeBtn) closeBtn.addEventListener('click', closeStoryModal);
+  // Lightbox close events
+  const closeLightboxBtn = document.getElementById('closeLightboxBtn');
+  if (closeLightboxBtn) closeLightboxBtn.addEventListener('click', closeLightbox);
 
-  const overlay = document.getElementById('modalOverlay');
-  if (overlay) overlay.addEventListener('click', closeStoryModal);
-
-  const markReadBtn = document.getElementById('markReadBtn');
-  if (markReadBtn) markReadBtn.addEventListener('click', toggleMarkReadCurrentStory);
-
-  const prevBtn = document.getElementById('prevStoryBtn');
-  if (prevBtn) prevBtn.addEventListener('click', () => navigateModalStory(-1));
-
-  const nextBtn = document.getElementById('nextStoryBtn');
-  if (nextBtn) nextBtn.addEventListener('click', () => navigateModalStory(1));
-
-  const noteInput = document.getElementById('userStoryNoteInput');
-  if (noteInput) {
-    let timeout = null;
-    noteInput.addEventListener('input', () => {
-      clearTimeout(timeout);
-      timeout = setTimeout(saveUserNote, 600);
+  const lightboxModal = document.getElementById('imageLightboxModal');
+  if (lightboxModal) {
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) closeLightbox();
     });
   }
 
   window.addEventListener('keydown', (e) => {
-    const modal = document.getElementById('storyModal');
-    if (!modal || !modal.classList.contains('active')) return;
-    if (e.key === 'Escape') closeStoryModal();
-    if (e.key === 'ArrowLeft') navigateModalStory(-1);
-    if (e.key === 'ArrowRight') navigateModalStory(1);
+    if (e.key === 'Escape') closeLightbox();
   });
 }
 
-// 10. INITIALIZATION
+// Initial Boot: Trigger Autoplay immediately on load
+startAutoplayFlute();
+
 document.addEventListener('DOMContentLoaded', () => {
   initAmbientCanvas();
-  setupEventListeners();
-  switchLanguage(state.lang);
-  renderStories();
+  setupGlobalEvents();
+  switchLanguage(state.lang); // Defaults to Hindi
+  startAutoplayFlute(); // Ensures audio playback starts
+  renderHomepageStories();
+  initStoryPage();
+  initCategoryPage();
 });

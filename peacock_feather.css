@@ -1,0 +1,53 @@
+/* ==========================================================================
+   PEACOCK FEATHER GUIDING ANIMATION (Website-wide Subtle Journey)
+   ========================================================================== */
+
+.guiding-feather-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 90;
+  overflow: hidden;
+}
+
+.floating-peacock-feather {
+  position: absolute;
+  width: 52px;
+  height: 90px;
+  filter: drop-shadow(0 0 12px rgba(246, 200, 103, 0.45)) drop-shadow(0 0 20px rgba(56, 189, 248, 0.3));
+  opacity: 0.85;
+  transition: opacity 0.8s ease;
+  will-change: transform;
+}
+
+.feather-sparkle-trail {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fde047 0%, #38bdf8 60%, transparent 100%);
+  pointer-events: none;
+  animation: sparkleFade 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes sparkleFade {
+  0% {
+    opacity: 0.9;
+    transform: scale(1.4) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.2) translateY(18px);
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-peacock-feather {
+    width: 38px;
+    height: 66px;
+    opacity: 0.75;
+  }
+}

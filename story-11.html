@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="hi" data-lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>कथा दर्शन | Krishna Leelas</title>
+  <meta name="description" content="Krishna Leela Sacred Story Webpage">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦚</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Noto+Serif+Devanagari:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="peacock_feather.css">
+</head>
+<body class="theme-krishna">
+  <script>window.__STORY_ID__ = 11; if (!window.location.search.includes('id=')) { history.replaceState(null, '', '?id=11'); }</script>
+    <!-- High-priority ambient flute audio element for immediate autoplay on page load -->
+  <audio id="bgFluteAudio" src="assets/divine_flute.mp3" loop preload="auto" autoplay></audio>
+
+  <!-- Refined Navigation Bar:
+       Desktop: Left Brand (Title + Italic Subtitle), Centered Section Names, Right Controls
+       Mobile: Centered Brand (Title + Italic Subtitle), Simple Flute ON/OFF, Lang Toggle, Hamburger Menu -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <!-- Left (Desktop) / Center (Mobile): Brand Group with Title & Subtitle -->
+      <a href="index.html#hero" class="nav-brand-group" title="दर्शन">
+        <div class="brand-title-primary">
+          <span class="brand-lotus">🪷</span>
+          <span class="brand-shloka" data-i18n="shloka_nav">॥ श्री कृष्णाय नमः ॥</span>
+          <span class="brand-lotus">🪷</span>
+        </div>
+        <div class="brand-subtitle-italic" data-i18n="brand_subtitle">कृष्ण लीलाएँ</div>
+      </a>
+
+      <!-- Center (Desktop Only): Section Navigation Links -->
+      <nav class="desktop-nav-links" id="desktopNavLinks">
+        <a href="index.html#hero" class="nav-link " data-i18n="nav_home">दर्शन</a>
+        <a href="index.html#stories" class="nav-link" data-i18n="nav_stories">कथाएँ</a>
+        <a href="index.html#life-lessons" class="nav-link" data-i18n="nav_lessons">जीवन दर्शन</a>
+      </nav>
+
+      <!-- Right: Controls -->
+      <div class="nav-controls">
+        <!-- Divine Flute Button: Full label on desktop, compact ON/OFF on mobile -->
+        <button id="fluteAudioBtn" class="control-btn flute-btn" title="दिव्य बाँसुरी वादन" aria-label="Toggle Divine Flute">
+          <span class="btn-icon">🪈</span>
+          <span class="btn-label desktop-only-text" data-i18n="flute_btn">बाँसुरी धुन</span>
+          <span class="mobile-flute-state" id="mobileFluteState">ON</span>
+          <span class="sound-wave">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+
+        <div class="nav-right-actions">
+          <!-- Language Switcher -->
+          <button id="langToggleBtn" class="control-btn lang-btn" title="भाषा बदलें / Change Language" aria-label="Change Language">
+            <span class="lang-tag active-lang" id="langHi">हिं</span>
+            <span class="lang-sep">/</span>
+            <span class="lang-tag" id="langEn">EN</span>
+          </button>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button id="mobileMenuBtn" class="control-btn mobile-menu-btn" title="मेनू खोलें" aria-label="Open Menu" aria-expanded="false">
+            <span class="hamburger-box">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation Menu -->
+    <div class="mobile-dropdown-menu" id="mobileDropdownMenu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <a href="index.html#hero" class="mobile-nav-item " data-nav="hero">
+          <div class="mobile-nav-item-left">
+            <span class="mobile-nav-icon">🪷</span>
+            <span class="mobile-nav-label" data-i18n="nav_home">दर्शन</span>
+          </div>
+          <span class="mobile-nav-arrow">→</span>
+        </a>
+        <a href="index.html#stories" class="mobile-nav-item" data-nav="stories">
+          <div class="mobile-nav-item-left">
+            <span class="mobile-nav-icon">📖</span>
+            <span class="mobile-nav-label" data-i18n="nav_stories">कथाएँ</span>
+          </div>
+          <span class="mobile-nav-arrow">→</span>
+        </a>
+        <a href="index.html#life-lessons" class="mobile-nav-item" data-nav="life-lessons">
+          <div class="mobile-nav-item-left">
+            <span class="mobile-nav-icon">🌿</span>
+            <span class="mobile-nav-label" data-i18n="nav_lessons">जीवन दर्शन</span>
+          </div>
+          <span class="mobile-nav-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="story-page-wrapper">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-nav">
+      <a href="index.html" data-i18n="nav_home">दर्शन</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="index.html#stories" data-i18n="nav_stories">कथाएँ</a>
+      <span class="breadcrumb-sep">›</span>
+      <span id="breadcrumbCategory" class="breadcrumb-curr">प्रेम</span>
+      <span class="breadcrumb-sep">›</span>
+      <span id="breadcrumbTitle" class="breadcrumb-curr">कथा</span>
+    </nav>
+
+    <!-- Main Dedicated Story Container -->
+    <main class="story-detail-container">
+      <!-- Story Page Header with 1:1 Image Placeholder -->
+      <section class="story-page-header">
+        <div class="story-header-left">
+          <div class="story-meta-pills">
+            <span class="story-number-badge" id="storyNumberBadge">कथा #०१</span>
+            <a href="#" id="storyCategoryPill" class="story-category-pill theme-tag-love">प्रेम</a>
+          </div>
+          <h1 class="story-main-title" id="storyMainTitle">कारागृह जन्म</h1>
+          <div class="story-main-subtitle" id="storyMainSubtitle">कंस के कारागार में प्रभु श्रीकृष्ण का पावन प्राकट्य</div>
+        </div>
+
+        <!-- 1:1 Traditional Indian Craftsmanship Golden Frame with Peacock Engravings -->
+        <div class="story-image-frame-wrapper" id="storyImageWrapper" title="पूर्ण स्क्रीन में दर्शन हेतु क्लिक करें (Click to view full screen)">
+          <div class="indian-craft-frame" id="storyCraftFrame">
+            <div class="frame-corner corner-tl"></div>
+            <div class="frame-corner corner-tr"></div>
+            <div class="frame-corner corner-bl"></div>
+            <div class="frame-corner corner-br"></div>
+            <div class="peacock-border-accent"></div>
+            <div class="frame-inner-canvas">
+              <img id="storyCustomImg" src="" alt="Story Artwork" class="modal-story-image" style="display: none;">
+              <div class="frame-art-placeholder" id="storyArtPlaceholder">
+                <div class="halo-art-glow"></div>
+                <svg class="placeholder-peacock-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="50" cy="50" r="44" stroke="#f6c867" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.5"/>
+                  <path d="M50 16 C34 32, 28 54, 50 86 C72 54, 66 32, 50 16 Z" stroke="#f6c867" stroke-width="2" fill="rgba(246, 200, 103, 0.08)"/>
+                  <ellipse cx="50" cy="40" rx="11" ry="16" fill="#0f766e" stroke="#f6c867" stroke-width="1.5"/>
+                  <ellipse cx="50" cy="42" rx="7" ry="9" fill="#1e40af" stroke="#38bdf8" stroke-width="1.2"/>
+                  <circle cx="50" cy="43" r="3.5" fill="#fbbf24"/>
+                  <path d="M22 66 Q50 46 78 66" stroke="#f6c867" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="44" cy="58" r="1.5" fill="#f6c867"/>
+                  <circle cx="50" cy="56" r="1.5" fill="#f6c867"/>
+                  <circle cx="56" cy="58" r="1.5" fill="#f6c867"/>
+                </svg>
+                <span class="placeholder-caption" data-i18n="darshan_caption">दिव्य झाँकी</span>
+              </div>
+            </div>
+          </div>
+          <span class="expand-hint-badge">🔍</span>
+        </div>
+      </section>
+
+      <!-- Listen to Story Audio Panel (Starts with "Shree Krishnaaya Namah", Indian Storyteller Voice) -->
+      <section class="story-audio-panel">
+        <div class="audio-panel-left">
+          <span class="audio-namah-badge">॥ श्री कृष्णाय नमः ॥</span>
+          <span class="audio-panel-text" data-i18n="audio_storyteller_desc">भारतीय साधु वाणी व तानपुरा की पावन ध्वनि में कथावाचन</span>
+        </div>
+        <button id="storyPageNarrateBtn" class="storyteller-play-btn" title="कथा सुनें">
+          <span id="narrateBtnIcon">🔊</span>
+          <span id="narrateBtnText" data-i18n="listen_story_btn">कथा सुनें</span>
+        </button>
+      </section>
+
+      <!-- Narrative & Wisdom Body (Comments removed completely) -->
+      <article class="story-body-content">
+        <section class="story-narrative-section">
+          <h2 class="story-section-title">
+            <span>🪷</span> <span data-i18n="modal_about_heading">पावन कथा</span>
+          </h2>
+          <div class="story-text-paragraphs" id="storyTextParagraphs">
+            <!-- Narrative inserted dynamically -->
+          </div>
+        </section>
+
+        <!-- Golden Lesson Card -->
+        <section class="story-lesson-card">
+          <h2 class="story-section-title" style="margin-bottom: 0.2rem;">
+            <span>✨</span> <span data-i18n="modal_lesson_heading">जीवन की सीख</span>
+          </h2>
+          <div class="lesson-highlight-text" id="storyLessonHighlight">
+            <!-- Highlight quote -->
+          </div>
+          <div class="lesson-full-explanation" id="storyLessonExplanation">
+            <!-- Full lesson -->
+          </div>
+        </section>
+
+        <!-- Sacred Benediction -->
+        <div class="story-benediction-card">
+          <div class="benediction-shloka">॥ जय श्री कृष्ण ॥</div>
+          <div class="benediction-sub" data-i18n="modal_benediction_text">
+            भगवान श्रीकृष्ण आपके जीवन को सदैव प्रेम, आनंद और प्रकाश से परिपूर्ण रखें।
+          </div>
+        </div>
+
+        <!-- Story Page Navigation Bar (Prev Story | All Stories | Next Story) -->
+        <nav class="story-bottom-nav-bar">
+          <a href="#" id="prevStoryPageBtn" class="nav-page-btn">
+            <span>←</span> <span data-i18n="prev_story">पिछली कथा</span>
+          </a>
+          <a href="index.html#stories" class="nav-page-btn nav-all-stories-btn" data-i18n="view_all_stories">
+            <span>🪷</span> <span data-i18n="all_stories_btn">सभी कथाएँ</span>
+          </a>
+          <a href="#" id="nextStoryPageBtn" class="nav-page-btn">
+            <span data-i18n="next_story">अगली कथा</span> <span>→</span>
+          </a>
+        </nav>
+      </article>
+    </main>
+  </div>
+
+  <!-- Fullscreen Lightbox Image Viewer -->
+  <div id="imageLightboxModal" class="image-lightbox-modal" aria-hidden="true">
+    <div class="lightbox-container">
+      <button id="closeLightboxBtn" class="lightbox-close-btn" aria-label="Close viewer">✕</button>
+      <div class="lightbox-golden-frame">
+        <div class="frame-corner corner-tl"></div>
+        <div class="frame-corner corner-tr"></div>
+        <div class="frame-corner corner-bl"></div>
+        <div class="frame-corner corner-br"></div>
+        <div class="peacock-border-accent"></div>
+        <div class="frame-inner-canvas">
+          <img id="lightboxImg" src="" alt="Story Artwork Expanded" class="modal-story-image" style="display: none;">
+          <div class="frame-art-placeholder" id="lightboxPlaceholder">
+            <div class="halo-art-glow"></div>
+            <svg class="placeholder-peacock-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 140px; height: 140px;">
+              <circle cx="50" cy="50" r="44" stroke="#f6c867" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.5"/>
+              <path d="M50 16 C34 32, 28 54, 50 86 C72 54, 66 32, 50 16 Z" stroke="#f6c867" stroke-width="2" fill="rgba(246, 200, 103, 0.08)"/>
+              <ellipse cx="50" cy="40" rx="11" ry="16" fill="#0f766e" stroke="#f6c867" stroke-width="1.5"/>
+              <ellipse cx="50" cy="42" rx="7" ry="9" fill="#1e40af" stroke="#38bdf8" stroke-width="1.2"/>
+              <circle cx="50" cy="43" r="3.5" fill="#fbbf24"/>
+              <path d="M22 66 Q50 46 78 66" stroke="#f6c867" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="44" cy="58" r="1.5" fill="#f6c867"/>
+              <circle cx="50" cy="56" r="1.5" fill="#f6c867"/>
+              <circle cx="56" cy="58" r="1.5" fill="#f6c867"/>
+            </svg>
+            <span class="placeholder-caption" style="font-size: 1rem; margin-top: 0.5rem;" data-i18n="darshan_caption">दिव्य झाँकी</span>
+          </div>
+        </div>
+      </div>
+      <div class="lightbox-caption" id="lightboxCaption">दिव्य दर्शन</div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="brand-lotus">🪷</span>
+        <span class="footer-title" data-i18n="footer_title">॥ श्री कृष्णाय नमः ॥</span>
+        <span class="brand-lotus">🪷</span>
+      </div>
+      <p class="footer-quote" data-i18n="footer_quote">
+        "कृष्णं वन्दे जगद्गुरुम्" — अखिल ब्रह्मांड के सद्गुरु भगवान श्रीकृष्ण के पावन चरणों में कोटिशः प्रणाम।
+      </p>
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="index.html#hero" data-i18n="nav_home">दर्शन</a>
+          <a href="index.html#stories" data-i18n="nav_stories">कथाएँ</a>
+          <a href="index.html#life-lessons" data-i18n="nav_lessons">जीवन दर्शन</a>
+        </div>
+        <p class="copyright-text" data-i18n="copyright_text">
+          ॥ जय श्री कृष्ण ॥ • A Divine Celebration of Krishna Leela & Swaroop Kathas
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="peacock_feather.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

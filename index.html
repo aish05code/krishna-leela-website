@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>कृष्ण लीला | Krishna Leela - दिव्य स्वरूप एवं पावन कथाएँ</title>
-  <meta name="description" content="कृष्ण के अनेक रूप, अनेक लीलाएँ और अनेक कहानियाँ… हमारे घर में सजे हर स्वरूप के पीछे छिपी है एक कथा।">
+  <title>कृष्ण लीलाएँ | Krishna Leelas</title>
+  <meta name="description" content="In one, love; in another, friendship; somewhere courage; and sometimes gentle lessons for life. Come, let us explore these divine swaroops of Kanha and his stories.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦚</text></svg>">
   
   <!-- Google Fonts: Cinzel, Noto Serif Devanagari, Rozha One, Plus Jakarta Sans -->
@@ -13,83 +13,117 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Noto+Serif+Devanagari:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="peacock_feather.css">
 </head>
 <body class="theme-krishna">
-  <!-- Ambient Background Canvas for floating stardust and golden motes -->
-  <canvas id="ambientCanvas"></canvas>
+    <!-- High-priority ambient flute audio element for immediate autoplay on page load -->
+  <audio id="bgFluteAudio" src="assets/divine_flute.mp3" loop preload="auto" autoplay></audio>
 
-  <!-- Navigation Bar -->
-  <header class="site-header">
+  <!-- Refined Navigation Bar:
+       Desktop: Left Brand (Title + Italic Subtitle), Centered Section Names, Right Controls
+       Mobile: Centered Brand (Title + Italic Subtitle), Simple Flute ON/OFF, Lang Toggle, Hamburger Menu -->
+  <header class="site-header" id="siteHeader">
     <div class="nav-container">
-      <a href="#hero" class="nav-brand">
-        <span class="brand-lotus">🪷</span>
-        <div class="brand-text">
+      <!-- Left (Desktop) / Center (Mobile): Brand Group with Title & Subtitle -->
+      <a href="#hero" class="nav-brand-group" title="दर्शन">
+        <div class="brand-title-primary">
+          <span class="brand-lotus">🪷</span>
           <span class="brand-shloka" data-i18n="shloka_nav">॥ श्री कृष्णाय नमः ॥</span>
-          <span class="brand-sub">कृष्ण लीला • Divine Leelas</span>
+          <span class="brand-lotus">🪷</span>
         </div>
+        <div class="brand-subtitle-italic" data-i18n="brand_subtitle">कृष्ण लीलाएँ</div>
       </a>
 
-      <nav class="nav-links">
+      <!-- Center (Desktop Only): Section Navigation Links -->
+      <nav class="desktop-nav-links" id="desktopNavLinks">
         <a href="#hero" class="nav-link active" data-i18n="nav_home">दर्शन</a>
-        <a href="#stories" class="nav-link" data-i18n="nav_stories">१६ कथाएँ</a>
-        <a href="#wisdom" class="nav-link" data-i18n="nav_lessons">जीवन की सीख</a>
-        <a href="#closing" class="nav-link" data-i18n="nav_blessings">आशीर्वाद</a>
+        <a href="#stories" class="nav-link" data-i18n="nav_stories">कथाएँ</a>
+        <a href="#life-lessons" class="nav-link" data-i18n="nav_lessons">जीवन दर्शन</a>
       </nav>
 
+      <!-- Right: Controls -->
       <div class="nav-controls">
-        <!-- Flute Melody Player -->
-        <button id="fluteAudioBtn" class="control-btn flute-btn" title="दिव्य बाँसुरी वादन">
+        <!-- Divine Flute Button: Full label on desktop, compact ON/OFF on mobile -->
+        <button id="fluteAudioBtn" class="control-btn flute-btn" title="दिव्य बाँसुरी वादन" aria-label="Toggle Divine Flute">
           <span class="btn-icon">🪈</span>
-          <span class="btn-label" data-i18n="flute_btn">बाँसुरी धुन</span>
+          <span class="btn-label desktop-only-text" data-i18n="flute_btn">बाँसुरी धुन</span>
+          <span class="mobile-flute-state" id="mobileFluteState">ON</span>
           <span class="sound-wave">
             <span></span><span></span><span></span>
           </span>
         </button>
 
-        <!-- Language Switcher -->
-        <button id="langToggleBtn" class="control-btn lang-btn" title="भाषा बदलें / Change Language">
-          <span class="lang-tag active-lang" id="langHi">हिं</span>
-          <span class="lang-sep">/</span>
-          <span class="lang-tag" id="langEn">EN</span>
-        </button>
+        <div class="nav-right-actions">
+          <!-- Language Switcher -->
+          <button id="langToggleBtn" class="control-btn lang-btn" title="भाषा बदलें / Change Language" aria-label="Change Language">
+            <span class="lang-tag active-lang" id="langHi">हिं</span>
+            <span class="lang-sep">/</span>
+            <span class="lang-tag" id="langEn">EN</span>
+          </button>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button id="mobileMenuBtn" class="control-btn mobile-menu-btn" title="मेनू खोलें" aria-label="Open Menu" aria-expanded="false">
+            <span class="hamburger-box">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation Menu -->
+    <div class="mobile-dropdown-menu" id="mobileDropdownMenu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <a href="#hero" class="mobile-nav-item active" data-nav="hero">
+          <div class="mobile-nav-item-left">
+            <span class="mobile-nav-icon">🪷</span>
+            <span class="mobile-nav-label" data-i18n="nav_home">दर्शन</span>
+          </div>
+          <span class="mobile-nav-arrow">→</span>
+        </a>
+        <a href="#stories" class="mobile-nav-item" data-nav="stories">
+          <div class="mobile-nav-item-left">
+            <span class="mobile-nav-icon">📖</span>
+            <span class="mobile-nav-label" data-i18n="nav_stories">कथाएँ</span>
+          </div>
+          <span class="mobile-nav-arrow">→</span>
+        </a>
+        <a href="#life-lessons" class="mobile-nav-item" data-nav="life-lessons">
+          <div class="mobile-nav-item-left">
+            <span class="mobile-nav-icon">🌿</span>
+            <span class="mobile-nav-label" data-i18n="nav_lessons">जीवन दर्शन</span>
+          </div>
+          <span class="mobile-nav-arrow">→</span>
+        </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section Centered on Krishna Artwork -->
+  <!-- Darshan Section: Unobstructed Bal Krishna Artwork (Shree Krishnaya Namah completely removed from this section) -->
   <section id="hero" class="hero-section">
     <div class="hero-backdrop-gradient"></div>
     <div class="hero-radial-glow"></div>
 
     <div class="hero-layout">
-      <!-- Left Content Wing (in negative space) -->
+      <!-- Left Content Wing -->
       <div class="hero-wing hero-left-wing">
-        <div class="divine-badge">
-          <span class="lotus-glyph">🪷</span>
-          <span data-i18n="invocation_banner">॥ श्री कृष्णाय नमः ॥</span>
-          <span class="lotus-glyph">🪷</span>
-        </div>
-
         <h1 class="hero-title">
           <span class="title-primary" data-i18n="hero_title_1">कृष्ण के अनेक रूप,</span>
           <span class="title-accent" data-i18n="hero_title_2">अनेक लीलाएँ और कथाएँ…</span>
         </h1>
 
-        <div class="hero-verses">
-          <p class="verse-lead" data-i18n="hero_verse_1">
-            हमारे घर में सजे हर स्वरूप के पीछे छिपी है एक कथा।
-          </p>
-          <p class="verse-body" data-i18n="hero_verse_2">
-            किसी में प्रेम, किसी में मित्रता, किसी में साहस और किसी में जीवन की एक छोटी-सी सीख।
-          </p>
-          <p class="verse-cta-text" data-i18n="hero_verse_3">
-            आइए, कान्हा के इन स्वरूपों और उनकी कहानियों को जानें।
+        <!-- User's Exact New Homepage Introductory Lines -->
+        <div class="hero-intro-lead-box">
+          <p class="hero-intro-text" data-i18n="hero_intro_text">
+            किसी में प्रेम, किसी में मित्रता; कहीं साहस; और कभी जीवन की सहज सीख। आइए, कान्हा के इन दिव्य स्वरूपों और उनकी कहानियों को जानें।
           </p>
         </div>
 
         <div class="hero-actions">
           <a href="#stories" class="btn-primary-divine">
-            <span class="btn-text" data-i18n="hero_explore_btn">१६ पावन कथाएँ पढ़ें</span>
+            <span class="btn-text" data-i18n="hero_explore_btn">पावन कथाएँ पढ़ें</span>
             <span class="btn-arrow">↓</span>
           </a>
           <button id="quickFluteBtn" class="btn-secondary-divine">
@@ -100,15 +134,15 @@
 
         <div class="hero-stats-row">
           <div class="stat-pill">
-            <span class="stat-num">१६</span>
+            <span class="stat-num" data-stat="stories">१६</span>
             <span class="stat-lbl" data-i18n="stat_swaroops">दिव्य कथाएँ</span>
           </div>
           <div class="stat-pill">
-            <span class="stat-num">४</span>
-            <span class="stat-lbl" data-i18n="stat_themes">जीवन के सूत्र</span>
+            <span class="stat-num" data-stat="themes">४</span>
+            <span class="stat-lbl" data-i18n="stat_themes">जीवन सूत्र</span>
           </div>
           <div class="stat-pill">
-            <span class="stat-num">अनंत</span>
+            <span class="stat-num" data-i18n="stat_grace_val">अनंत</span>
             <span class="stat-lbl" data-i18n="stat_grace">भगवद् कृपा</span>
           </div>
         </div>
@@ -133,7 +167,7 @@
         </div>
       </div>
 
-      <!-- Right Content Wing (in negative space) -->
+      <!-- Right Content Wing -->
       <div class="hero-wing hero-right-wing">
         <div class="glass-card wisdom-card">
           <div class="card-header">
@@ -158,29 +192,29 @@
             <li class="virtue-item">
               <span class="virtue-icon">🪷</span>
               <div>
-                <strong data-i18n="v_love">प्रेम</strong>
-                <span data-i18n="v_love_desc">माखन भक्षण, रास व शृंगार लीला</span>
+                <strong data-i18n="v_love">निश्छल प्रेम</strong>
+                <span data-i18n="v_love_desc">नवनीत, कृष्ण-बलराम, रास व शृंगार लीला</span>
               </div>
             </li>
             <li class="virtue-item">
               <span class="virtue-icon">🤝</span>
               <div>
-                <strong data-i18n="v_friendship">मित्रता</strong>
-                <span data-i18n="v_friendship_desc">कृष्णा की टोली, बलराम संग व सुदामा</span>
+                <strong data-i18n="v_friendship">सच्ची मित्रता</strong>
+                <span data-i18n="v_friendship_desc">माखन चोरी, कृष्णा की टोली व सुदामा स्वागत</span>
               </div>
             </li>
             <li class="virtue-item">
               <span class="virtue-icon">🛡️</span>
               <div>
-                <strong data-i18n="v_courage">साहस</strong>
-                <span data-i18n="v_courage_desc">यमुना तरण, गोवर्धन व कंस वध</span>
+                <strong data-i18n="v_courage">धर्म-साहस</strong>
+                <span data-i18n="v_courage_desc">कारागृह जन्म, यमुना तरण, पूतना व कंस संहार</span>
               </div>
             </li>
             <li class="virtue-item">
               <span class="virtue-icon">☀️</span>
               <div>
-                <strong data-i18n="v_wisdom">सीख</strong>
-                <span data-i18n="v_wisdom_desc">यमलार्जुन भंजन व चीर हरण</span>
+                <strong data-i18n="v_wisdom">दिव्य विवेक</strong>
+                <span data-i18n="v_wisdom_desc">यमलार्जुन भंजन, गोवर्धन धारण व गोपी वस्त्रहरण</span>
               </div>
             </li>
           </ul>
@@ -188,19 +222,92 @@
       </div>
     </div>
 
-    <a href="#stories" class="scroll-indicator" aria-label="कथाओं की ओर बढ़ें">
-      <span class="scroll-text" data-i18n="scroll_prompt">कथाओं में प्रवेश करें</span>
+    <a href="#life-lessons" class="scroll-indicator" aria-label="जीवन दर्शन की ओर बढ़ें">
+      <span class="scroll-text" data-i18n="scroll_prompt">लीलाओं में प्रवेश करें</span>
       <span class="scroll-icon">↓</span>
     </a>
   </section>
 
-  <!-- Stories Section (१६ दिव्य कथाएँ) -->
+  <!-- Renamed Life Lessons Section (formerly Wisdom): 4 Core Connected Categories -->
+  <section id="life-lessons" class="life-lessons-section">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge">
+          <span class="feather-glyph">🪶</span>
+          <span data-i18n="wisdom_badge">दैनिक जीवन में कृष्ण दर्शन</span>
+        </div>
+        <h2 class="section-title" data-i18n="wisdom_heading">
+          कान्हा की लीलाओं से जीवन को सुंदर बनाने के ४ पावन सूत्र
+        </h2>
+        <p class="section-subtitle" data-i18n="wisdom_subheading">
+          चार दिव्य मार्ग जो कृष्ण की कथाओं को हमारे दैनिक जीवन, भावनाओं और चेतना से जोड़ते हैं।
+        </p>
+      </div>
+
+      <!-- 4 Connected Life-Lesson Category Cards (Direct navigation to category collection) -->
+      <div class="categories-grid">
+        <!-- 1. Unconditional Love -->
+        <a href="category.html?theme=love" class="category-card" title="प्रेम कथाएँ देखें">
+          <div class="category-icon-glyph">🪷</div>
+          <h3 class="category-title" data-i18n="cat_love_title">निश्छल प्रेम</h3>
+          <p class="category-desc" data-i18n="cat_love_desc">
+            माता यशोदा के वात्सल्य से लेकर श्रीराधा संग दिव्य महारास तक, कान्हा सिखाते हैं कि सच्चा प्रेम अधिकार जताने में नहीं, बल्कि निःस्वार्थ समर्पण, आत्मीय सेवा और निश्छल स्नेह में खिलता है।
+          </p>
+          <div class="category-stories-list" data-i18n="cat_love_stories">
+            नवनीत भक्षण • कृष्ण-बलराम • रास लीला • शृंगार लीला • राधा-कृष्ण
+          </div>
+          <span class="category-explore-link" data-i18n="cat_explore_btn">कथाएँ पढ़ें →</span>
+        </a>
+
+        <!-- 2. Pure Friendship -->
+        <a href="category.html?theme=friendship" class="category-card" title="मित्रता कथाएँ देखें">
+          <div class="category-icon-glyph">🤝</div>
+          <h3 class="category-title" data-i18n="cat_friendship_title">सच्ची मित्रता</h3>
+          <p class="category-desc" data-i18n="cat_friendship_desc">
+            गोकुल में सखाओं संग माखन बांटने और पतंग उड़ाने से लेकर राजसिंहासन छोड़ सुदामा के चरण पखारने तक, कान्हा का संदेश है कि सच्ची मित्रता में धन, पद और ऐश्वर्य का कोई भेद नहीं होता।
+          </p>
+          <div class="category-stories-list" data-i18n="cat_friendship_stories">
+            माखन चोरी • कृष्णा की टोली • पद प्रक्षालन (सुदामा)
+          </div>
+          <span class="category-explore-link" data-i18n="cat_explore_btn">कथाएँ पढ़ें →</span>
+        </a>
+
+        <!-- 3. Righteous Courage & Faith -->
+        <a href="category.html?theme=courage" class="category-card" title="साहस कथाएँ देखें">
+          <div class="category-icon-glyph">🛡️</div>
+          <h3 class="category-title" data-i18n="cat_courage_title">धर्म-साहस</h3>
+          <p class="category-desc" data-i18n="cat_courage_desc">
+            कंस के कारागार में आधी रात को प्राकट्य से लेकर उफनती यमुना और कालिया नाग के दमन तक, कान्हा सिखाते हैं कि धर्म के मार्ग पर विश्वास ही हमारे भय को असीम आत्मबल में बदल देता है।
+          </p>
+          <div class="category-stories-list" data-i18n="cat_courage_stories">
+            कारागृह जन्म • यमुना तरण • पूतना वध • कालिया मर्दन • कंस संहार
+          </div>
+          <span class="category-explore-link" data-i18n="cat_explore_btn">कथाएँ पढ़ें →</span>
+        </a>
+
+        <!-- 4. Divine Wisdom & Awakening -->
+        <a href="category.html?theme=wisdom" class="category-card" title="विवेक कथाएँ देखें">
+          <div class="category-icon-glyph">☀️</div>
+          <h3 class="category-title" data-i18n="cat_wisdom_title">दिव्य विवेक</h3>
+          <p class="category-desc" data-i18n="cat_wisdom_desc">
+            यमलार्जुन वृक्षों के अहंकार-मुक्ति से लेकर कनिष्ठिका पर गोवर्धन पर्वत धारण तक, कान्हा हमें सिखाते हैं कि बाह्य दंभ और कर्मकांडों से ऊपर उठकर प्रकृति का सम्मान और विनम्र समर्पण ही सच्ची प्रज्ञा है।
+          </p>
+          <div class="category-stories-list" data-i18n="cat_wisdom_stories">
+            यमलार्जुन भंजन • गोवर्धन धारण • गोपी वस्त्रहरण
+          </div>
+          <span class="category-explore-link" data-i18n="cat_explore_btn">कथाएँ पढ़ें →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stories Section (Renamed to "Stories" / "कथाएँ" without emphasizing 16) -->
   <section id="stories" class="stories-section">
     <div class="section-container">
       <div class="section-header">
         <div class="section-badge">
           <span class="lotus-glyph">🪷</span>
-          <span data-i18n="section_badge">कान्हा की १६ पावन कथाएँ</span>
+          <span data-i18n="section_badge">कान्हा की पावन कथाएँ</span>
           <span class="lotus-glyph">🪷</span>
         </div>
         <h2 class="section-title" data-i18n="stories_heading">
@@ -211,16 +318,14 @@
         </p>
       </div>
 
-      <!-- Controls: Horizontally scrollable filter tabs on phone & search -->
+      <!-- Controls: Reflowable category tabs & clean search -->
       <div class="filter-search-wrapper">
-        <div class="filter-tabs-container">
-          <div class="filter-tabs" id="filterTabs">
-            <button class="filter-tab active" data-filter="all" data-i18n="filter_all">सभी १६ कथाएँ</button>
-            <button class="filter-tab" data-filter="love" data-i18n="filter_love">प्रेम</button>
-            <button class="filter-tab" data-filter="friendship" data-i18n="filter_friendship">मित्रता</button>
-            <button class="filter-tab" data-filter="courage" data-i18n="filter_courage">साहस</button>
-            <button class="filter-tab" data-filter="wisdom" data-i18n="filter_wisdom">जीवन की सीख</button>
-          </div>
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-tab active" data-filter="all" data-i18n="filter_all">सभी कथाएँ</button>
+          <button class="filter-tab" data-filter="love" data-i18n="filter_love">प्रेम</button>
+          <button class="filter-tab" data-filter="friendship" data-i18n="filter_friendship">मित्रता</button>
+          <button class="filter-tab" data-filter="courage" data-i18n="filter_courage">धर्म-साहस</button>
+          <button class="filter-tab" data-filter="wisdom" data-i18n="filter_wisdom">दिव्य विवेक</button>
         </div>
 
         <div class="search-box">
@@ -235,214 +340,29 @@
         </div>
       </div>
 
-      <!-- Stories Grid (Emoji-free, Mobile-optimized) -->
+      <!-- Responsive Stories Grid (Each card links directly to story.html?id=X) -->
       <div class="stories-grid" id="storiesGrid">
-        <!-- 16 Story Cards rendered dynamically by app.js -->
+        <!-- Story Cards rendered dynamically by app.js -->
       </div>
     </div>
   </section>
 
-  <!-- Wisdom Highlight Section (जीवन की सीख) -->
-  <section id="wisdom" class="wisdom-section">
-    <div class="section-container">
-      <div class="section-header">
-        <div class="section-badge">
-          <span class="feather-glyph">🪶</span>
-          <span data-i18n="wisdom_badge">दैनिक जीवन में कृष्ण दर्शन</span>
-          <span class="feather-glyph">🪶</span>
-        </div>
-        <h2 class="section-title" data-i18n="wisdom_heading">
-          कान्हा की लीलाओं से जीवन को सुंदर बनाने के ४ मार्ग
-        </h2>
-      </div>
-
-      <div class="wisdom-pillars-grid">
-        <div class="pillar-card">
-          <div class="pillar-icon-box">🪷</div>
-          <h3 class="pillar-title" data-i18n="pillar_1_title">निश्छल प्रेम</h3>
-          <p class="pillar-desc" data-i18n="pillar_1_desc">
-            नवनीत लीला और रास हमें सिखाते हैं कि सच्चा प्रेम अधिकार जताने में नहीं, बल्कि संपूर्ण समर्पण और निःस्वार्थ सेवा में है।
-          </p>
-          <div class="pillar-tag" data-i18n="pillar_1_tag">माखन चोर • शृंगार लीला</div>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-icon-box">🤝</div>
-          <h3 class="pillar-title" data-i18n="pillar_2_title">सच्ची मित्रता</h3>
-          <p class="pillar-desc" data-i18n="pillar_2_desc">
-            कृष्णा की टोली और सुदामा के चरण पखारना सिद्ध करता है कि सच्ची मित्रता में पद, प्रतिष्ठा और संपत्ति का कोई भेद नहीं होता।
-          </p>
-          <div class="pillar-tag" data-i18n="pillar_2_tag">कृष्णा टोली • पाद प्रक्षालन</div>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-icon-box">⛰️</div>
-          <h3 class="pillar-title" data-i18n="pillar_3_title">संकट में अटूट धैर्य</h3>
-          <p class="pillar-desc" data-i18n="pillar_3_desc">
-            उफनती यमुना में उतरते वसुदेव और कनिष्ठिका पर गोवर्धन धारण कान्हा का संदेश है कि विश्वास असंभव में भी मार्ग बना देता है।
-          </p>
-          <div class="pillar-tag" data-i18n="pillar_3_tag">यमुना तरण • गोवर्धन धारण</div>
-        </div>
-
-        <div class="pillar-card">
-          <div class="pillar-icon-box">☀️</div>
-          <h3 class="pillar-title" data-i18n="pillar_4_title">अहंकार मुक्ति व न्याय</h3>
-          <p class="pillar-desc" data-i18n="pillar_4_desc">
-            यमलार्जुन भंजन और कंस वध सिखाते हैं कि सच्ची स्वतंत्रता अहंकार गिरने से मिलती है, और भय की नींव पर खड़ी सत्ता कभी नहीं टिकती।
-          </p>
-          <div class="pillar-tag" data-i18n="pillar_4_tag">यमलार्जुन • कंस वध</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Sacred Notion Asides & Devotional Blessing Section -->
-  <section id="closing" class="closing-section">
-    <div class="section-container">
-      <div class="blessings-glow-backdrop"></div>
-      
-      <div class="asides-wrapper">
-        <aside class="notion-aside prayer-aside">
-          <div class="aside-icon">🙏🏻</div>
-          <div class="aside-content">
-            <h3 class="aside-text" data-i18n="aside_1">
-              हर कहानी में कृष्ण, और हर कृष्ण में एक सीख।
-            </h3>
-            <p class="aside-sub" data-i18n="aside_1_sub">
-              Every story holds Krishna, and every Krishna form holds a timeless lesson for the soul.
-            </p>
-          </div>
-        </aside>
-
-        <aside class="notion-aside mahamantra-aside">
-          <div class="aside-icon">🦚</div>
-          <div class="aside-content">
-            <h2 class="aside-shloka" data-i18n="aside_2">
-              ॥ जय श्री कृष्ण ॥
-            </h2>
-            <p class="aside-blessing-line" data-i18n="aside_2_blessing">
-              May Krishna always fill your life with love, joy, courage and light.
-            </p>
-          </div>
-        </aside>
-      </div>
-
-      <div class="janmotsav-card">
-        <div class="janmotsav-inner">
-          <span class="golden-feather">🪶</span>
-          <h3 data-i18n="janmotsav_title">🪷 कृष्ण जन्मोत्सव की हार्दिक शुभकामनाएँ 🪷</h3>
-          <p data-i18n="janmotsav_text">
-            श्रीकृष्ण की कृपा से आपके घर-परिवार में सदैव सुख, शांति, प्रेम और आनंद का वास रहे। कान्हा आपके जीवन के हर महाभारत में आपके सारथी बनें।
-          </p>
-          <div class="interactive-counts">
-            <span id="readStoriesCount">०</span> / १६ <span data-i18n="read_counter_lbl">कथाएँ पढ़ी गईं</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Story Reader Modal / Drawer (Emoji-Free in Content) -->
-  <div id="storyModal" class="story-modal" aria-hidden="true" role="dialog">
-    <div class="modal-overlay" id="modalOverlay"></div>
-    <div class="modal-container">
-      <div class="modal-top-bar">
-        <div class="modal-badge-group">
-          <span class="modal-number-badge" id="modalNumberBadge">Story 1</span>
-          <span class="modal-theme-badge" id="modalThemeBadge">प्रेम</span>
-        </div>
-        <div class="modal-controls">
-          <button id="narrateBtn" class="modal-tool-btn" title="कथा सुनें">
-            <span id="narrateIcon">🔊</span>
-            <span id="narrateText" data-i18n="listen_story_btn">कथा सुनें</span>
-          </button>
-          <button id="closeModalBtn" class="modal-close-btn" aria-label="Close modal">✕</button>
-        </div>
-      </div>
-
-      <div class="modal-body" id="modalBody">
-        <div class="modal-swaroop-header">
-          <div class="modal-header-text">
-            <h2 class="modal-title" id="modalTitle">Karagrha Janma</h2>
-            <div class="modal-subtitle" id="modalSubtitle">Krishna’s Birth in Kansa’s Prison</div>
-          </div>
-        </div>
-
-        <div class="modal-section-box">
-          <div class="box-tag">
-            <span data-i18n="modal_about_heading">The Story</span>
-          </div>
-          <div class="story-text-content" id="modalStoryText">
-            <!-- Story content -->
-          </div>
-        </div>
-
-        <div class="modal-lesson-box">
-          <div class="box-tag">
-            <span data-i18n="modal_lesson_heading">The Lesson</span>
-          </div>
-          <div class="lesson-text-content" id="modalLessonText">
-            <!-- Lesson content -->
-          </div>
-        </div>
-
-        <div class="modal-benediction-box">
-          <div class="benediction-shloka">॥ जय श्री कृष्ण ॥</div>
-          <div class="benediction-blessing" data-i18n="modal_benediction_text">
-            May Krishna always fill your life with love, joy and light.
-          </div>
-        </div>
-
-        <div class="modal-user-notes-section">
-          <div class="notes-header">
-            <span data-i18n="modal_notes_title">हमारे घर के कान्हा</span>
-          </div>
-          <p class="notes-help" data-i18n="modal_notes_help">
-            आपके घर में सजे इस स्वरूप के बारे में कोई विशेष संस्मरण, शृंगार या विचार यहाँ लिखें:
-          </p>
-          <textarea 
-            id="userStoryNoteInput" 
-            class="user-notes-textarea" 
-            placeholder="उदा. यह मूर्ति हमारे पूज्य दादाजी के समय की है, जिसे जन्माष्टमी पर पीतांबर वस्त्रों से सजाया जाता है..."
-            data-i18n-placeholder="user_note_placeholder"
-          ></textarea>
-          <div class="notes-save-status" id="noteSaveStatus"></div>
-        </div>
-      </div>
-
-      <div class="modal-footer">
-        <button id="prevStoryBtn" class="nav-story-btn">
-          <span>←</span> <span data-i18n="prev_story">पिछली कथा</span>
-        </button>
-        <button id="markReadBtn" class="mark-read-btn">
-          <span id="markReadIcon">✓</span> <span id="markReadText" data-i18n="mark_read">पढ़ा हुआ चिह्नित करें</span>
-        </button>
-        <button id="nextStoryBtn" class="nav-story-btn">
-          <span data-i18n="next_story">अगली कथा</span> <span>→</span>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Site Footer -->
+  <!-- Site Footer (Blessings Section completely removed) -->
   <footer class="site-footer">
     <div class="footer-container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <span class="brand-lotus">🪷</span>
-          <span class="footer-title">॥ श्री कृष्णाय नमः ॥</span>
-          <span class="brand-lotus">🪷</span>
-        </div>
-        <p class="footer-quote" data-i18n="footer_quote">
-          "कृष्णं वन्दे जगद्गुरुम्" — अखिल ब्रह्मांड के सद्गुरु भगवान श्रीकृष्ण के पावन चरणों में कोटिशः प्रणाम।
-        </p>
+      <div class="footer-brand">
+        <span class="brand-lotus">🪷</span>
+        <span class="footer-title" data-i18n="footer_title">॥ श्री कृष्णाय नमः ॥</span>
+        <span class="brand-lotus">🪷</span>
       </div>
+      <p class="footer-quote" data-i18n="footer_quote">
+        "कृष्णं वन्दे जगद्गुरुम्" — अखिल ब्रह्मांड के सद्गुरु भगवान श्रीकृष्ण के पावन चरणों में कोटिशः प्रणाम।
+      </p>
       <div class="footer-bottom">
         <div class="footer-links">
           <a href="#hero" data-i18n="nav_home">दर्शन</a>
-          <a href="#stories" data-i18n="nav_stories">१६ कथाएँ</a>
-          <a href="#wisdom" data-i18n="nav_lessons">जीवन की सीख</a>
-          <a href="#closing" data-i18n="nav_blessings">आशीर्वाद</a>
+          <a href="#stories" data-i18n="nav_stories">कथाएँ</a>
+          <a href="#life-lessons" data-i18n="nav_lessons">जीवन दर्शन</a>
         </div>
         <p class="copyright-text" data-i18n="copyright_text">
           ॥ जय श्री कृष्ण ॥ • A Divine Celebration of Krishna Leela & Swaroop Kathas
@@ -451,6 +371,7 @@
     </div>
   </footer>
 
+  <script src="peacock_feather.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

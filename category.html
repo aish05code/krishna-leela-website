@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hi" data-lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>लीला वर्ग दर्शन | Krishna Leelas</title>
+  <meta name="description" content="Krishna Leela Category Stories">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦚</text></svg>">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Noto+Serif+Devanagari:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="peacock_feather.css">
+</head>
+<body class="theme-krishna">
+    <!-- High-priority ambient flute audio element for immediate autoplay on page load -->
+  <audio id="bgFluteAudio" src="assets/divine_flute.mp3" loop preload="auto" autoplay></audio>
+
+  <!-- Refined Navigation Bar:
+       Desktop: Left Brand (Title + Italic Subtitle), Centered Section Names, Right Controls
+       Mobile: Centered Brand (Title + Italic Subtitle), Simple Flute ON/OFF, Lang Toggle, Hamburger Menu -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+      <!-- Left (Desktop) / Center (Mobile): Brand Group with Title & Subtitle -->
+      <a href="index.html#hero" class="nav-brand-group" title="दर्शन">
+        <div class="brand-title-primary">
+          <span class="brand-lotus">🪷</span>
+          <span class="brand-shloka" data-i18n="shloka_nav">॥ श्री कृष्णाय नमः ॥</span>
+          <span class="brand-lotus">🪷</span>
+        </div>
+        <div class="brand-subtitle-italic" data-i18n="brand_subtitle">कृष्ण लीलाएँ</div>
+      </a>
+
+      <!-- Center (Desktop Only): Section Navigation Links -->
+      <nav class="desktop-nav-links" id="desktopNavLinks">
+        <a href="index.html#hero" class="nav-link " data-i18n="nav_home">दर्शन</a>
+        <a href="index.html#stories" class="nav-link" data-i18n="nav_stories">कथाएँ</a>
+        <a href="index.html#life-lessons" class="nav-link" data-i18n="nav_lessons">जीवन दर्शन</a>
+      </nav>
+
+      <!-- Right: Controls -->
+      <div class="nav-controls">
+        <!-- Divine Flute Button: Full label on desktop, compact ON/OFF on mobile -->
+        <button id="fluteAudioBtn" class="control-btn flute-btn" title="दिव्य बाँसुरी वादन" aria-label="Toggle Divine Flute">
+          <span class="btn-icon">🪈</span>
+          <span class="btn-label desktop-only-text" data-i18n="flute_btn">बाँसुरी धुन</span>
+          <span class="mobile-flute-state" id="mobileFluteState">ON</span>
+          <span class="sound-wave">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+
+        <div class="nav-right-actions">
+          <!-- Language Switcher -->
+          <button id="langToggleBtn" class="control-btn lang-btn" title="भाषा बदलें / Change Language" aria-label="Change Language">
+            <span class="lang-tag active-lang" id="langHi">हिं</span>
+            <span class="lang-sep">/</span>
+            <span class="lang-tag" id="langEn">EN</span>
+          </button>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button id="mobileMenuBtn" class="control-btn mobile-menu-btn" title="मेनू खोलें" aria-label="Open Menu" aria-expanded="false">
+            <span class="hamburger-box">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation Menu -->
+    <div class="mobile-dropdown-menu" id="mobileDropdownMenu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <a href="index.html#hero" class="mobile-nav-item " data-nav="hero">
+          <div class="mobile-nav-item-left">
+            <span class="mobile-nav-icon">🪷</span>
+            <span class="mobile-nav-label" data-i18n="nav_home">दर्शन</span>
+          </div>
+          <span class="mobile-nav-arrow">→</span>
+        </a>
+        <a href="index.html#stories" class="mobile-nav-item" data-nav="stories">
+          <div class="mobile-nav-item-left">
+            <span class="mobile-nav-icon">📖</span>
+            <span class="mobile-nav-label" data-i18n="nav_stories">कथाएँ</span>
+          </div>
+          <span class="mobile-nav-arrow">→</span>
+        </a>
+        <a href="index.html#life-lessons" class="mobile-nav-item" data-nav="life-lessons">
+          <div class="mobile-nav-item-left">
+            <span class="mobile-nav-icon">🌿</span>
+            <span class="mobile-nav-label" data-i18n="nav_lessons">जीवन दर्शन</span>
+          </div>
+          <span class="mobile-nav-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="story-page-wrapper">
+    <nav class="breadcrumb-nav">
+      <a href="index.html" data-i18n="nav_home">दर्शन</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="index.html#life-lessons" data-i18n="nav_lessons">जीवन दर्शन</a>
+      <span class="breadcrumb-sep">›</span>
+      <span id="categoryBreadcrumbTitle" class="breadcrumb-curr">वर्ग</span>
+    </nav>
+
+    <main class="section-container" style="padding: 2rem 1.5rem 5rem; z-index: 2; position: relative;">
+      <div class="section-header" style="text-align: center; margin-bottom: 2.8rem;">
+        <div class="section-badge" id="categoryHeaderBadge">
+          <span id="categoryIconGlyph">🪷</span>
+          <span id="categoryBadgeText">लीला सूत्र</span>
+        </div>
+        <h1 class="section-title" id="categoryPageTitle">निश्छल प्रेम</h1>
+        <p class="section-subtitle" id="categoryPageDesc" style="max-width: 750px; margin: 0 auto;">
+          <!-- Description inserted dynamically -->
+        </p>
+      </div>
+
+      <!-- Filter tabs in category page -->
+      <div style="display: flex; justify-content: center; margin-bottom: 2rem; gap: 0.6rem; flex-wrap: wrap;">
+        <a href="category.html?theme=love" class="filter-tab" id="tabLove" data-i18n="cat_love_title">निश्छल प्रेम</a>
+        <a href="category.html?theme=friendship" class="filter-tab" id="tabFriendship" data-i18n="cat_friendship_title">सच्ची मित्रता</a>
+        <a href="category.html?theme=courage" class="filter-tab" id="tabCourage" data-i18n="cat_courage_title">धर्म-साहस</a>
+        <a href="category.html?theme=wisdom" class="filter-tab" id="tabWisdom" data-i18n="cat_wisdom_title">दिव्य विवेक</a>
+        <a href="index.html#stories" class="filter-tab" data-i18n="all_stories_btn">सभी कथाएँ →</a>
+      </div>
+
+      <!-- Stories Grid -->
+      <div class="stories-grid" id="categoryStoriesGrid">
+        <!-- Stories belonging to this category inserted here -->
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="brand-lotus">🪷</span>
+        <span class="footer-title" data-i18n="footer_title">॥ श्री कृष्णाय नमः ॥</span>
+        <span class="brand-lotus">🪷</span>
+      </div>
+      <p class="footer-quote" data-i18n="footer_quote">
+        "कृष्णं वन्दे जगद्गुरुम्" — अखिल ब्रह्मांड के सद्गुरु भगवान श्रीकृष्ण के पावन चरणों में कोटिशः प्रणाम।
+      </p>
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="index.html#hero" data-i18n="nav_home">दर्शन</a>
+          <a href="index.html#stories" data-i18n="nav_stories">कथाएँ</a>
+          <a href="index.html#life-lessons" data-i18n="nav_lessons">जीवन दर्शन</a>
+        </div>
+        <p class="copyright-text" data-i18n="copyright_text">
+          ॥ जय श्री कृष्ण ॥ • A Divine Celebration of Krishna Leela & Swaroop Kathas
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="peacock_feather.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

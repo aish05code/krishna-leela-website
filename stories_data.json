@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "icon": "🪷",
     "theme": "courage",
+    "slug": "karagrha-janma",
     "title": {
       "en": "Karagrha Janma",
-      "hi": "कारागृह जन्म (Karagrha Janma)"
+      "hi": "कारागृह जन्म"
     },
     "subtitle": {
       "en": "Krishna’s Birth in Kansa’s Prison",
@@ -13,7 +13,7 @@
     },
     "about": {
       "en": "In the dark prison of Mathura, Devaki and Vasudeva were held captive by the cruel King Kansa. A prophecy had foretold that Devaki’s eighth child would bring an end to Kansa’s tyranny.\n\nOn the sacred night of Krishna Janmashtami, at midnight, Lord Krishna was born as their eighth child. At that divine moment, the prison was filled with a celestial light. The guards fell into a deep sleep, the chains binding Vasudeva loosened, and the locked prison doors miraculously opened.\n\nThe little child born within prison walls had come to free the world from fear, injustice and oppression.",
-      "hi": "मथुरा के अंधकारमय कारागार में क्रूर राजा कंस ने देवकी और वसुदेव को बंदी बना रखा था। आकाशवाणी ने भविष्यवाणी की थी कि देवकी की आठवीं संतान कंस के अत्याचार का अंत करेगी।\n\nभाद्रपद कृष्ण अष्टमी की पावन मध्यरात्रि में, भगवान श्रीकृष्ण ने आठवीं संतान के रूप में जन्म लिया। उस दिव्य क्षण में संपूर्ण कारागार अलौकिक प्रकाश से आलोकित हो उठा। पहरेदार गहरी निद्रा में सो गए, वसुदेव की बेड़ियाँ स्वतः खुल गईं और बंद लौह कपाट चमत्कारिक रूप से खुल गए।\n\nकारागार की दीवारों के भीतर जन्मा वह नन्हा बालक संसार को भय, अन्याय और उत्पीड़न से मुक्त करने आया था।"
+      "hi": "मथुरा के अंधकारमय कारागार में क्रूर राजा कंस ने देवकी और वसुदेव को बंदी बना रखा था। उस समय यह भविष्यवाणी हुई थी कि देवकी की आठवीं संतान कंस के अत्याचार का अंत करेगी।\n\nभाद्रपद कृष्ण अष्टमी की पावन मध्यरात्रि में, भगवान श्रीकृष्ण ने आठवीं संतान के रूप में जन्म लिया। उस दिव्य क्षण में संपूर्ण कारागार अलौकिक प्रकाश से आलोकित हो उठा। पहरेदार गहरी निद्रा में सो गए, वसुदेव की बेड़ियाँ स्वतः खुल गईं और बंद लौह कपाट चमत्कारिक रूप से खुल गए।\n\nकारागार की दीवारों के भीतर जन्मा वह नन्हा बालक संसार को भय, अन्याय और उत्पीड़न से मुक्त करने आया था।"
     },
     "lessonHighlight": {
       "en": "Light can be born even in the darkest place.",
@@ -26,11 +26,11 @@
   },
   {
     "id": 2,
-    "icon": "🌊",
     "theme": "courage",
+    "slug": "yamuna-taran",
     "title": {
       "en": "Yamuna Taran",
-      "hi": "यमुना तरण (Yamuna Taran)"
+      "hi": "यमुना तरण"
     },
     "subtitle": {
       "en": "Vasudeva Crosses the Yamuna with Baby Krishna",
@@ -38,7 +38,7 @@
     },
     "about": {
       "en": "On the night Krishna was born, the prison doors miraculously opened and Vasudeva was guided to carry the newborn Krishna from Mathura to the safety of Gokul.\n\nWith baby Krishna resting in a basket upon his head, Vasudeva stepped into the swollen Yamuna, while heavy rain poured around him. As he moved forward, the waters rose higher and higher. Sheshnag appeared and spread his hoods over baby Krishna, protecting him from the storm.\n\nThe Yamuna is also traditionally described as rising to touch Krishna’s divine feet before making way for Vasudeva to cross safely. Guided and protected by divine grace, Vasudeva reached Gokul and entrusted Krishna to the care of Nanda and Yashoda.",
-      "hi": "जिस रात्रि श्रीकृष्ण का जन्म हुआ, कारागार के द्वार चमत्कारिक रूप से खुल गए और वसुदेव को नवजात कृष्ण को मथुरा से सुरक्षित गोकुल ले जाने की दिव्य प्रेरणा मिली।\n\nसिर पर सूप (टोकरी) में बाल कृष्ण को विराजमान कर, वसुदेव मूसलाधार वर्षा के बीच उफनती हुई यमुना में उतर पड़े। जैसे-जैसे वे आगे बढ़े, जलस्तर बढ़ता गया। तभी शेषनाग ने प्रकट होकर अपने सहस्त्र फनों की छत्रछाया से बाल कृष्ण को तूफानी वर्षा से सुरक्षित किया।\n\nपरंपरागत कथा के अनुसार, यमुना जी ने प्रभु के श्रीचरणों का स्पर्श करने के लिए अपना जल स्तर उठाया और स्पर्श पाते ही शांत होकर मार्ग दे दिया। ईश्वरीय कृपा से वसुदेव गोकुल पहुंचे और कान्हा को नंदराय जी और यशोदा मैया के वात्सल्य में सौंप दिया।"
+      "hi": "जिस रात्रि श्रीकृष्ण का जन्म हुआ, कारागार के द्वार चमत्कारिक रूप से खुल गए और वसुदेव को नवजात कृष्ण को मथुरा से सुरक्षित गोकुल ले जाने की दिव्य प्रेरणा मिली।\n\nसिर पर सूप में बाल कृष्ण को विराजमान कर, वसुदेव मूसलाधार वर्षा के बीच उफनती हुई यमुना में उतर पड़े। जैसे-जैसे वे आगे बढ़े, जलस्तर बढ़ता गया। तभी शेषनाग ने प्रकट होकर अपने सहस्त्र फनों की छत्रछाया से बाल कृष्ण को तूफानी वर्षा से सुरक्षित किया।\n\nपरंपरागत कथा के अनुसार, यमुना जी ने प्रभु के श्रीचरणों का स्पर्श करने के लिए अपना जल स्तर उठाया और स्पर्श पाते ही शांत होकर मार्ग दे दिया। ईश्वरीय कृपा से वसुदेव गोकुल पहुंचे और कान्हा को नंदराय जी और यशोदा मैया के वात्सल्य में सौंप दिया।"
     },
     "lessonHighlight": {
       "en": "When we walk with faith, a path appears even through the impossible.",
@@ -51,11 +51,11 @@
   },
   {
     "id": 3,
-    "icon": "🌸",
-    "theme": "love",
+    "theme": "courage",
+    "slug": "putana-vadha",
     "title": {
       "en": "Putana Vadha / Putana Moksha",
-      "hi": "पूतना वध / पूतना मोक्ष"
+      "hi": "पूतना वध व मोक्ष"
     },
     "subtitle": {
       "en": "Krishna Liberates Putana",
@@ -76,11 +76,11 @@
   },
   {
     "id": 4,
-    "icon": "🧈",
     "theme": "love",
+    "slug": "navnit-bhakshan-leela",
     "title": {
       "en": "Navnit Bhakshan Leela",
-      "hi": "नवनीत भक्षण लीला (Navnit Bhakshan Leela)"
+      "hi": "नवनीत भक्षण लीला"
     },
     "subtitle": {
       "en": "Yashoda Lovingly Feeds Krishna Butter",
@@ -88,7 +88,7 @@
     },
     "about": {
       "en": "In the loving home of Nanda and Yashoda, little Krishna had a special fondness for navnit—freshly churned butter. While he would later become famous as the mischievous Makhan Chor, some of the sweetest moments were those when Mother Yashoda lovingly fed him butter with her own hands.\n\nThe Lord who sustains the entire universe became a little child before a mother—waiting for another morsel, smiling at her, and accepting her affection with innocent delight.\n\nThrough this simple act, the divine became deeply personal: the Supreme Lord allowed himself to be nourished by a mother’s love.",
-      "hi": "नंदबाबा और मैया यशोदा के स्नेहमयी घर में, नन्हे कान्हा को नवनीत (ताजे मथे हुए माखन) से विशेष प्रेम था। यद्यपि वे आगे चलकर नटखट 'माखन चोर' के रूप में प्रसिद्ध हुए, परंतु सबसे मधुर क्षण वे थे जब माता यशोदा अपने हाथों से बड़े दुलार से उन्हें माखन खिलाती थीं।\n\nजो परमात्मा संपूर्ण ब्रह्मांड का पोषण करता है, वह एक माता के सम्मुख नन्हा बालक बनकर अगले निवाले की प्रतीक्षा करता, मुस्कुराता और बालसुलभ आनंद से वात्सल्य स्वीकार करता था।\n\nइस सरल लीला के माध्यम से ईश्वर अत्यंत आत्मीय बन गए: जगदाधार ने स्वयं को एक माँ के प्रेम से पोषित होने दिया।"
+      "hi": "नंदबाबा और मैया यशोदा के स्नेहमयी घर में, नन्हे कान्हा को नवनीत यानी ताजे मथे हुए माखन से विशेष प्रेम था। यद्यपि वे आगे चलकर नटखट माखन चोर के रूप में प्रसिद्ध हुए, परंतु सबसे मधुर क्षण वे थे जब माता यशोदा अपने हाथों से बड़े दुलार से उन्हें माखन खिलाती थीं।\n\nजो परमात्मा संपूर्ण ब्रह्मांड का पोषण करता है, वह एक माता के सम्मुख नन्हा बालक बनकर अगले निवाले की प्रतीक्षा करता, मुस्कुराता और बालसुलभ आनंद से वात्सल्य स्वीकार करता था।\n\nइस सरल लीला के माध्यम से ईश्वर अत्यंत आत्मीय बन गए: जगदाधार ने स्वयं को एक माँ के प्रेम से पोषित होने दिया।"
     },
     "lessonHighlight": {
       "en": "Love is most powerful when expressed through simple acts of care.",
@@ -101,11 +101,11 @@
   },
   {
     "id": 5,
-    "icon": "🏺",
-    "theme": "love",
+    "theme": "friendship",
+    "slug": "makhan-chori-leela",
     "title": {
-      "en": "Navnitchor Leela",
-      "hi": "नवनीतचोर लीला — माखन चोर (Navnitchor Leela)"
+      "en": "Makhan Chori Leela",
+      "hi": "माखन चोरी लीला"
     },
     "subtitle": {
       "en": "Krishna, the Beloved Makhan Chor",
@@ -113,24 +113,24 @@
     },
     "about": {
       "en": "Little Krishna’s love for navnit—freshly churned butter soon turned into one of his most endearing childhood mischiefs. Along with his friends, Krishna would sneak into the homes of the Gopis, climb onto overturned pots and stools, and steal butter stored high beyond his reach.\n\nSometimes he would eat it himself, sometimes share it with his friends, and sometimes even feed it to the monkeys! The Gopis would come to Mother Yashoda with endless complaints, yet Krishna’s innocent expressions and playful excuses made it impossible to remain angry with him for long.\n\nSoon, the little butter thief of Gokul became everyone’s beloved Makhan Chor—stealing not just butter, but the hearts of all who loved him.",
-      "hi": "नन्हे कृष्ण का ताजे माखन के प्रति प्रेम शीघ्र ही उनकी सबसे प्रिय बाल-लीलाओं में बदल गया। अपने ग्वाल-बाल सखाओं के साथ मिलकर वे गोपियों के घरों में चुपके से घुस जाते, मटकियों और पीढ़ियों पर चढ़ते और छींके पर लटकी मटकियों से माखन चुरा लेते।\n\nकभी वे स्वयं खाते, कभी मित्रों में बाँटते और कभी वानरों को खिला देते! गोपियाँ यशोदा मैया के पास उलहाने लेकर आती थीं, परंतु कान्हा के भोले मुखमंडल और नटखट बहानों को देखकर कोई भी उन पर अधिक देर तक क्रोधित नहीं रह पाता था।\n\nशीघ्र ही गोकुल का वह नन्हा चोर सबका प्रिय 'माखन चोर' बन गया—जिसने केवल माखन ही नहीं, बल्कि हर भक्त का हृदय चुरा लिया था।"
+      "hi": "नन्हे कृष्ण का ताजे माखन के प्रति प्रेम शीघ्र ही उनकी सबसे प्रिय बाल-लीलाओं में बदल गया। अपने ग्वाल-बाल सखाओं के साथ मिलकर वे गोपियों के घरों में चुपके से घुस जाते, मटकियों और पीढ़ियों पर चढ़ते और छींके पर लटकी मटकियों से माखन चुरा लेते।\n\nकभी वे स्वयं खाते, कभी मित्रों में बाँटते और कभी वानरों को खिला देते! गोपियाँ यशोदा मैया के पास उलहाने लेकर आती थीं, परंतु कान्हा के भोले मुखमंडल और नटखट बहानों को देखकर कोई भी उन पर अधिक देर तक क्रोधित नहीं रह पाता था।\n\nशीघ्र ही गोकुल का वह नन्हा चोर सबका प्रिय माखन चोर बन गया—जिसने केवल माखन ही नहीं, बल्कि हर भक्त का हृदय चुरा लिया था।"
     },
     "lessonHighlight": {
       "en": "Joy lives in sharing, simplicity and togetherness.",
       "hi": "आनंद बाँटने, सरलता और परस्पर साथ में ही निवास करता है।"
     },
     "lesson": {
-      "en": "Navnitchor Leela reminds us not to lose the playfulness of childhood. Krishna’s mischief brought people together and filled ordinary homes with laughter. Life becomes richer when we share what we have, cherish our relationships and leave a little room for innocent joy.",
-      "hi": "नवनीतचोर लीला हमें बचपन के भोलापन और आनंद को कभी न खोने का संदेश देती है। कान्हा की शरारतों ने लोगों को परस्पर जोड़ा और साधारण घरों को हंसी से भर दिया। जीवन तब समृद्ध बनता है जब हम जो कुछ हमारे पास है उसे बाँटते हैं, रिश्तों का सम्मान करते हैं और मन में निष्कपट आनंद के लिए स्थान रखते हैं।"
+      "en": "Makhan Chori Leela reminds us not to lose the playfulness of childhood. Krishna’s mischief brought people together and filled ordinary homes with laughter. Life becomes richer when we share what we have, cherish our relationships and leave a little room for innocent joy.",
+      "hi": "माखन चोरी लीला हमें बचपन के भोलापन और आनंद को कभी न खोने का संदेश देती है। कान्हा की शरारतों ने लोगों को परस्पर जोड़ा और साधारण घरों को हंसी से भर दिया। जीवन तब समृद्ध बनता है जब हम जो कुछ हमारे पास है उसे बाँटते हैं, रिश्तों का सम्मान करते हैं और मन में निष्कपट आनंद के लिए स्थान रखते हैं।"
     }
   },
   {
     "id": 6,
-    "icon": "🪵",
     "theme": "wisdom",
+    "slug": "yamalarjuna-bhanjana",
     "title": {
       "en": "Yamalarjuna Bhanjana",
-      "hi": "यमलार्जुन भंजन (Yamalarjuna Bhanjana)"
+      "hi": "यमलार्जुन भंजन"
     },
     "subtitle": {
       "en": "Krishna Uproots the Twin Arjuna Trees",
@@ -138,7 +138,7 @@
     },
     "about": {
       "en": "After one of little Krishna’s mischievous adventures, Mother Yashoda tied him to a heavy wooden mortar (ukhala). Krishna began crawling away, dragging the mortar behind him, until he passed between two tall Arjuna trees. The mortar became stuck between them, but with one powerful pull, Krishna brought both trees crashing to the ground.\n\nFrom the fallen trees emerged Nalakuvara and Manigriva, sons of Kubera. Once consumed by wealth and pride, they had been cursed by Sage Narada to remain as trees until Krishna came to liberate them.\n\nWith Krishna’s touch, their long wait ended. Humbled and transformed, they offered their prayers to him and were freed from the curse.",
-      "hi": "कान्हा की नटखट हरकतों से परेशान होकर माता यशोदा ने उन्हें एक भारी काष्ठ की ओखली (ऊखल) से बाँध दिया। बाल कृष्ण घुटनों के बल रेंगते हुए ओखली को घसीटने लगे और दो विशाल अर्जुन वृक्षों के मध्य से निकले। ओखली दोनों वृक्षों के बीच फँस गई, और कान्हा के एक ही सहज खिंचाव से दोनों वृक्ष गड़गड़ाहट के साथ धराशायी हो गए।\n\nगिरे हुए वृक्षों से कुबेर के दो पुत्र, नलकूबर और मणिग्रीव, दिव्य रूप में प्रकट हुए। कभी धन और ऐश्वर्य के घमंड में चूर होने के कारण उन्हें देवर्षि नारद ने वृक्ष बनने का शाप दिया था, जिसका अंत श्रीकृष्ण के स्पर्श से ही होना था।\n\nप्रभु के पावन स्पर्श से उनकी युगों की प्रतीक्षा समाप्त हुई। विनम्र और रूपांतरित होकर उन्होंने श्रीकृष्ण की स्तुति की और शाप-मुक्त होकर अपने लोक को प्रस्थान किया।"
+      "hi": "कान्हा की नटखट हरकतों से परेशान होकर माता यशोदा ने उन्हें एक भारी काष्ठ की ओखली से बाँध दिया। बाल कृष्ण घुटनों के बल रेंगते हुए ओखली को घसीटने लगे और दो विशाल अर्जुन वृक्षों के मध्य से निकले। ओखली दोनों वृक्षों के बीच फँस गई, और कान्हा के एक ही सहज खिंचाव से दोनों वृक्ष गड़गड़ाहट के साथ धराशायी हो गए।\n\nगिरे हुए वृक्षों से कुबेर के दो पुत्र, नलकूबर और मणिग्रीव, दिव्य रूप में प्रकट हुए। कभी धन और ऐश्वर्य के घमंड में चूर होने के कारण उन्हें देवर्षि नारद ने वृक्ष बनने का शाप दिया था, जिसका अंत श्रीकृष्ण के स्पर्श से ही होना था।\n\nप्रभु के पावन स्पर्श से उनकी युगों की प्रतीक्षा समाप्त हुई। विनम्र और रूपांतरित होकर उन्होंने श्रीकृष्ण की स्तुति की और शाप-मुक्त होकर अपने लोक को प्रस्थान किया।"
     },
     "lessonHighlight": {
       "en": "True freedom begins when pride falls away.",
@@ -151,11 +151,11 @@
   },
   {
     "id": 7,
-    "icon": "🪁",
     "theme": "friendship",
+    "slug": "krishna-ki-toli",
     "title": {
       "en": "Krishna ki Toli",
-      "hi": "कृष्णा की टोली — पतंग बाजी (Krishna ki Toli)"
+      "hi": "कृष्णा की टोली"
     },
     "subtitle": {
       "en": "Krishna Flying Kites with His Friends",
@@ -176,15 +176,15 @@
   },
   {
     "id": 8,
-    "icon": "🤝",
-    "theme": "friendship",
+    "theme": "love",
+    "slug": "krishna-balaram",
     "title": {
       "en": "Krishna Balaram",
-      "hi": "कृष्ण-बलराम — दो भाइयों का पावन बंधन"
+      "hi": "कृष्ण-बलराम"
     },
     "subtitle": {
       "en": "The Bond of Two Brothers",
-      "hi": "गोकुल व वृंदावन में परस्पर रक्षा, स्नेह और संगति"
+      "hi": "गोकुल व वृंदावन में परस्पर रक्षा, स्नेह और भ्रातृ-प्रेम"
     },
     "about": {
       "en": "Krishna and his elder brother Balaram grew up together in the joyful surroundings of Gokul and Vrindavan. From tending cows and playing in the fields to sharing childhood mischief and facing dangers together, the two brothers were constant companions.\n\nBalaram, known for his immense strength and protective nature, often stood beside Krishna, while Krishna filled their adventures with his wisdom, courage and playfulness. Their personalities were different, yet beautifully complementary.\n\nTheir childhood represents more than divine adventures—it celebrates the simple and enduring bond between brothers: growing together, protecting one another and standing side by side through every experience.",
@@ -201,11 +201,11 @@
   },
   {
     "id": 9,
-    "icon": "🐍",
     "theme": "courage",
+    "slug": "kaliya-mardhana",
     "title": {
       "en": "Kaliya Mardhana",
-      "hi": "कालिया मर्दन (Kaliya Mardhana)"
+      "hi": "कालिया मर्दन"
     },
     "subtitle": {
       "en": "Krishna Subdues Kaliya Naag",
@@ -213,7 +213,7 @@
     },
     "about": {
       "en": "The serpent Kaliya had made his home in the Yamuna, poisoning its waters with his venom and making the river dangerous for the people and animals of Vrindavan.\n\nOne day, young Krishna leapt into the Yamuna and confronted the mighty serpent. Kaliya wrapped his coils around Krishna, but Krishna effortlessly freed himself and climbed upon the serpent’s many hoods. He then began to dance upon Kaliya’s heads, gradually crushing his arrogance and exhausting his strength.\n\nSeeing Kaliya defeated, his wives, the Nagapatnis, prayed to Krishna for mercy. Krishna spared Kaliya’s life and ordered him to leave the Yamuna. Humbled, Kaliya departed with his family, and the waters became pure and safe once again.",
-      "hi": "कालिया नाग ने यमुना के अथाह कुंड में अपना वास बना लिया था, जिससे उसके भयंकर विष से यमुना का जल विषैला हो गया और वृंदावन के पशु-पक्षी और ग्वाले संकट में पड़ गए।\n\nएक दिन बालक कृष्ण यमुना के जल में कूद पड़े और उस महाबली सर्प का सामना किया। कालिया ने अपनी विशाल कुंडलियों से कृष्ण को लपेटने का प्रयास किया, परंतु प्रभु ने सहजता से स्वयं को मुक्त कर उसके फनों पर आरोहण किया। फिर उन्होंने कालिया के मस्तक पर अलौकिक नृत्य आरंभ किया, जिससे उसका सारा घमंड चूर-चूर हो गया।\n\nकालिया को पराजित देखकर उसकी पत्नियों, नागपत्नियों ने हाथ जोड़कर कान्हा से प्राण-दान की प्रार्थना की। दयालु प्रभु ने कालिया के प्राण बख्श दिए और उसे यमुना त्यागकर रमणक द्वीप जाने का आदेश दिया। नतमस्तक होकर कालिया परिवार सहित चला गया और यमुना का जल पुनः अमृततुल्य और पावन हो गया।"
+      "hi": "कालिया नाग ने यमुना के अथाह कुंड में अपना वास बना लिया था, जिससे उसके भयंकर विष से यमुना का जल विषैला हो गया और वृंदावन के पशु-पक्षी और ग्वाले संकट में पड़ गए।\n\nएक दिन बालक कृष्ण यमुना के जल में कूद पड़े और उस महाबली सर्प का सामना किया। कालिया ने अपनी विशाल कुंडलियों से कृष्ण को लपेटने का प्रयास किया, परंतु प्रभु ने सहजता से स्वयं को मुक्त कर उसके फनों पर आरोहण किया। फिर उन्होंने कालिया के मस्तक पर अलौकिक नृत्य आरंभ किया, जिससे उसका सारा घमंड चूर-चूर हो गया।\n\nकालिया को पराजित देखकर उसकी पत्नियों, नागपत्नियों ने हाथ जोड़कर कान्हा से प्राण-दान की प्रार्थना की। दयालु प्रभु ने कालिया के प्राण बख्श दिए और उसे यमुना त्यागकर जाने का आदेश दिया। नतमस्तक होकर कालिया परिवार सहित चला गया और यमुना का जल पुनः अमृततुल्य और पावन हो गया।"
     },
     "lessonHighlight": {
       "en": "True strength is not just defeating evil—it is knowing when to show mercy.",
@@ -226,11 +226,11 @@
   },
   {
     "id": 10,
-    "icon": "⛰️",
-    "theme": "courage",
+    "theme": "wisdom",
+    "slug": "govardhan-dharan",
     "title": {
       "en": "Govardhan Dharan",
-      "hi": "गोवर्धन धारण (Govardhan Dharan)"
+      "hi": "गोवर्धन धारण"
     },
     "subtitle": {
       "en": "Krishna Lifts Govardhan Parvat",
@@ -238,7 +238,7 @@
     },
     "about": {
       "en": "The people of Vrindavan traditionally prepared grand offerings for Lord Indra, the god of rain. Young Krishna encouraged them instead to honour Govardhan Hill, the cows, the land and the community that directly sustained their lives.\n\nAngered by this, Indra sent fierce storms and torrential rain upon Vrindavan. As the frightened villagers sought protection, Krishna effortlessly lifted Govardhan Parvat on the little finger of his left hand, holding it like a giant umbrella.\n\nFor seven days and seven nights, the people and animals of Vrindavan gathered safely beneath the mountain. Finally, Indra realised his pride and stopped the storm. He approached Krishna with humility and sought forgiveness.",
-      "hi": "वृंदावन के निवासी वर्षा के देवता इंद्र के लिए प्रतिवर्ष विशाल यज्ञ का आयोजन करते थे। नन्हे कृष्ण ने उन्हें समझाया कि उन्हें इंद्र के स्थान पर प्रत्यक्ष रूप से जीवन देने वाले गोवर्धन पर्वत, गौ-माता, उपजाऊ भूमि और समाज का पूजन करना चाहिए।\n\nइससे कुपित होकर इंद्र ने ब्रज पर प्रलयंकारी मेघ भेज दिए और मूसलाधार वर्षा व वज्रपात होने लगा। भयभीत ब्रजवासियों की पुकार सुनकर श्रीकृष्ण ने अपने बाएँ हाथ की कनिष्ठिका (छोटी उंगली) पर विशाल गोवर्धन पर्वत को एक विशाल छत्र की भाँति सहजता से उठा लिया।\n\nसात दिन और सात रात तक समस्त ब्रजवासी और मूक पशु पर्वत की छत्रछाया में सुरक्षित रहे। अंततः इंद्र का अभिमान भंग हुआ और उसने वर्षा रोक दी। इंद्र ने विनम्रतापूर्वक भगवान श्रीकृष्ण के चरणों में गिरकर क्षमा-याचना की।"
+      "hi": "वृंदावन के निवासी वर्षा के देवता इंद्र के लिए प्रतिवर्ष विशाल यज्ञ का आयोजन करते थे। नन्हे कृष्ण ने उन्हें समझाया कि उन्हें इंद्र के स्थान पर प्रत्यक्ष रूप से जीवन देने वाले गोवर्धन पर्वत, गौ-माता, उपजाऊ भूमि और समाज का पूजन करना चाहिए।\n\nइससे कुपित होकर इंद्र ने ब्रज पर प्रलयंकारी मेघ भेज दिए और मूसलाधार वर्षा व वज्रपात होने लगा। भयभीत ब्रजवासियों की पुकार सुनकर श्रीकृष्ण ने अपने बाएँ हाथ की कनिष्ठिका पर विशाल गोवर्धन पर्वत को एक विशाल छत्र की भाँति सहजता से उठा लिया।\n\nसात दिन और सात रात तक समस्त ब्रजवासी और मूक पशु पर्वत की छत्रछाया में सुरक्षित रहे। अंततः इंद्र का अभिमान भंग हुआ और उसने वर्षा रोक दी। इंद्र ने विनम्रतापूर्वक भगवान श्रीकृष्ण के चरणों में गिरकर क्षमा-याचना की।"
     },
     "lessonHighlight": {
       "en": "True greatness protects; it does not seek to be worshipped.",
@@ -251,11 +251,11 @@
   },
   {
     "id": 11,
-    "icon": "🪷",
     "theme": "wisdom",
+    "slug": "gopi-vastraharana",
     "title": {
       "en": "Gopi Vastraharana",
-      "hi": "चीर हरण लीला (Gopi Vastraharana)"
+      "hi": "गोपी वस्त्रहरण"
     },
     "subtitle": {
       "en": "Krishna and the Gopis’ Katyayani Vrata",
@@ -276,11 +276,11 @@
   },
   {
     "id": 12,
-    "icon": "💃",
     "theme": "love",
+    "slug": "raas-leela",
     "title": {
       "en": "Raas Leela",
-      "hi": "रास लीला (Raas Leela)"
+      "hi": "रास लीला"
     },
     "subtitle": {
       "en": "Krishna’s Divine Dance with Radha and the Gopis",
@@ -288,7 +288,7 @@
     },
     "about": {
       "en": "On a beautiful moonlit night in Vrindavan, the enchanting sound of Krishna’s flute echoed through the forest. Drawn by its divine melody, the Gopis came to Krishna, leaving behind their worldly distractions to experience the joy of being in his presence.\n\nKrishna began the sacred Raas, dancing with the Gopis beneath the moonlit sky. Through his divine power, each Gopi experienced Krishna dancing beside her, symbolising how the Divine can be completely present for every devotee.\n\nIn the devotional tradition, Radha and Krishna embody the highest expression of prema—love that seeks nothing for itself. Raas Leela therefore represents far more than a dance; it is the celebration of the soul’s longing for and union with the Divine.",
-      "hi": "वृंदावन की एक मनोहारी चाँदनी रात में, श्रीकृष्ण की बाँसुरी की सम्मोहक तान पूरे वन में गूंज उठी। उस दिव्य संगीत से आकर्षित होकर गोपियाँ अपने समस्त सांसारिक बंधनों को भुलाकर प्रभु के सान्निध्य का परमानंद पाने दौड़ी चली आईं।\n\nधवल चाँदनी के तले श्रीकृष्ण ने पावन रास का शुभारंभ किया। अपनी योगमाया के प्रभाव से प्रभु ने अनेक रूप धारण किए और प्रत्येक गोपी को यह अनुभव हुआ कि कान्हा साक्षात उसी के साथ नृत्य कर रहे हैं—जो यह दर्शाता है कि परमात्मा प्रत्येक भक्त के लिए पूर्ण रूप से सुलभ और उपस्थित हैं।\n\nभक्ति परंपरा में, श्रीराधा और श्रीकृष्ण 'प्रेम' की सर्वोच्च पराकाष्ठा हैं—वह प्रेम जो अपने लिए कुछ नहीं चाहता। अतः रास लीला केवल एक नृत्य नहीं, अपितु जीवात्मा की परमात्मा से एकाकार होने की परम आध्यात्मिक अनुभूति का उत्सव है।"
+      "hi": "वृंदावन की एक मनोहारी चाँदनी रात में, श्रीकृष्ण की बाँसुरी की सम्मोहक तान पूरे वन में गूंज उठी। उस दिव्य संगीत से आकर्षित होकर गोपियाँ अपने समस्त सांसारिक बंधनों को भुलाकर प्रभु के सान्निध्य का परमानंद पाने दौड़ी चली आईं।\n\nधवल चाँदनी के तले श्रीकृष्ण ने पावन रास का शुभारंभ किया। अपनी योगमाया के प्रभाव से प्रभु ने अनेक रूप धारण किए और प्रत्येक गोपी को यह अनुभव हुआ कि कान्हा साक्षात उसी के साथ नृत्य कर रहे हैं—जो यह दर्शाता है कि परमात्मा प्रत्येक भक्त के लिए पूर्ण रूप से सुलभ और उपस्थित हैं।\n\nभक्ति परंपरा में, श्रीराधा और श्रीकृष्ण प्रेम की सर्वोच्च पराकाष्ठा हैं—वह प्रेम जो अपने लिए कुछ नहीं चाहता। अतः रास लीला केवल एक नृत्य नहीं, अपितु जीवात्मा की परमात्मा से एकाकार होने की परम आध्यात्मिक अनुभूति का उत्सव है।"
     },
     "lessonHighlight": {
       "en": "The purest love is wholehearted, selfless and free from possession.",
@@ -301,19 +301,19 @@
   },
   {
     "id": 13,
-    "icon": "🌺",
     "theme": "love",
+    "slug": "kesh-prasadhana-shringar-leela",
     "title": {
       "en": "Kesh-Prasadhana / Shringar Leela",
-      "hi": "केश-प्रसाधन / शृंगार लीला"
+      "hi": "केश-प्रसाधन व शृंगार लीला"
     },
     "subtitle": {
-      "en": "Radha-Krishna Shringar Leela",
-      "hi": "श्रीकृष्ण द्वारा प्रेमपूर्वक श्रीराधा का केश-शृंगार व सेवा"
+      "en": "Rukmini-Krishna Shringar Leela",
+      "hi": "श्रीकृष्ण द्वारा प्रेमपूर्वक महारानी रुक्मिणी का केश-शृंगार व सेवा"
     },
     "about": {
-      "en": "Among the tender Leelas of Radha and Krishna are moments of Shringar—adorning one another with affection. In Kesh-Prasadhana, Krishna lovingly arranges Radha’s hair, decorating it with fragrant flowers and ornaments.\n\nHere, the one worshipped by the entire world lovingly serves his beloved. The gesture is simple and intimate: Krishna’s attention is not on his own grandeur, but on bringing joy to Radha.\n\nThe Leela beautifully expresses the tenderness of Radha-Krishna prema, where love is shown not merely through words, but through care, attention and acts of service.",
-      "hi": "राधा और कृष्ण की अत्यंत सुकोमल लीलाओं में 'शृंगार' के क्षण अनुपम हैं—जहाँ वे एक-दूसरे को अगाध स्नेह से सुसज्जित करते हैं। केश-प्रसाधन में, श्रीकृष्ण स्वयं अपने हाथों से श्रीराधा के केश संवारते हैं और उन्हें सुगंधित पुष्पों व आभूषणों से सजाते हैं।\n\nयहाँ, जिनकी पूजा समस्त त्रिलोकी करती है, वे स्वयं अपनी प्रियतमा की प्रेममयी सेवा करते हैं। यह भाव अत्यंत सरल और आत्मीय है: प्रभु का ध्यान अपने ऐश्वर्य पर नहीं, अपितु श्रीराधा के मुख पर आनंदमयी मुस्कान लाने पर है।\n\nयह लीला राधा-कृष्ण प्रेम के उस कोमल स्वरूप को प्रकट करती है, जहाँ प्रेम केवल शब्दों में नहीं, बल्कि आत्मीय देखभाल, सम्मान और सेवा-भाव में अभिव्यक्त होता है।"
+      "en": "Among the tender Leelas of Rukmini and Krishna are moments of Shringar—adorning one another with affection. In Kesh-Prasadhana, Krishna lovingly arranges Rukmini’s hair, decorating it with fragrant flowers and ornaments.\n\nHere, the one worshipped by the entire world lovingly serves his beloved. The gesture is simple and intimate: Krishna’s attention is not on his own grandeur, but on bringing joy to Rukmini.\n\nThe Leela beautifully expresses the tenderness of Rukmini-Krishna prema, where love is shown not merely through words, but through care, attention and acts of service.",
+      "hi": "रुक्मिणी और श्रीकृष्ण की सुकोमल लीलाओं में शृंगार के क्षण अनुपम हैं—जहाँ वे एक-दूसरे को अगाध स्नेह से सुसज्जित करते हैं। केश-प्रसाधन में, श्रीकृष्ण स्वयं अपने हाथों से महारानी रुक्मिणी के केश संवारते हैं और उन्हें सुगंधित पुष्पों व आभूषणों से सजाते हैं।\n\nयहाँ, जिनकी पूजा समस्त त्रिलोकी करती है, वे स्वयं अपनी प्रियतमा की प्रेममयी सेवा करते हैं। यह भाव अत्यंत सरल और आत्मीय है: प्रभु का ध्यान अपने ऐश्वर्य पर नहीं, अपितु रुक्मिणी जी के मुख पर आनंदमयी मुस्कान लाने पर है।\n\nयह लीला रुक्मिणी-कृष्ण प्रेम के उस कोमल स्वरूप को प्रकट करती है, जहाँ प्रेम केवल शब्दों में नहीं, बल्कि आत्मीय देखभाल, सम्मान और सेवा-भाव में अभिव्यक्त होता है।"
     },
     "lessonHighlight": {
       "en": "Love is not only something we feel; it is something we do.",
@@ -321,13 +321,13 @@
     },
     "lesson": {
       "en": "Kesh-Prasadhana reminds us that the deepest relationships are nurtured through small acts of care, respect and attention. True love does not ask, “What will I receive?” but finds happiness in making the other person feel cherished, seen and loved.",
-      "hi": "केश-प्रसाधन हमें स्मरण कराता है कि प्रगाढ़ संबंध परस्पर देखभाल, सम्मान और ध्यान के छोटे-छोटे कार्यों से ही सींचे जाते हैं। सच्चा प्रेम कभी यह नहीं पूछता, 'मुझे क्या मिलेगा?' बल्कि वह इस बात में आनंद पाता है कि उसका प्रियजन स्वयं को सम्मानित, सुरक्षित और प्रेममय अनुभव करे।"
+      "hi": "केश-प्रसाधन हमें स्मरण कराता है कि प्रगाढ़ संबंध परस्पर देखभाल, सम्मान और ध्यान के छोटे-छोटे कार्यों से ही सींचे जाते हैं। सच्चा प्रेम कभी यह नहीं पूछता, मुझे क्या मिलेगा? बल्कि वह इस बात में आनंद पाता है कि उसका प्रियजन स्वयं को सम्मानित, सुरक्षित और प्रेममय अनुभव करे।"
     }
   },
   {
     "id": 14,
-    "icon": "🦚",
     "theme": "love",
+    "slug": "radha-krishna-premkatha",
     "title": {
       "en": "Radha Krishna ki Premkatha",
       "hi": "राधा-कृष्ण की अमर प्रेमकथा"
@@ -338,7 +338,7 @@
     },
     "about": {
       "en": "In the sacred land of Vrindavan blossomed the timeless love of Radha and Krishna. Their bond was not defined by possessions, promises or worldly expectations, but by a profound devotion to one another.\n\nRadha’s love for Krishna represents complete bhakti—a love so pure that the self seems to disappear into the beloved. Krishna, in turn, is inseparable from Radha in the devotional imagination; together, Radha-Krishna became the eternal symbol of prema and devotion.\n\nThough Krishna eventually left Vrindavan for Mathura, their physical separation did not diminish their bond. In the Bhakti traditions, their longing itself becomes an expression of love—the idea that true connection can transcend distance, time and physical presence.\n\nTheir Premkatha is therefore not merely a romantic story; it symbolises the relationship between the individual soul and the Divine, forever longing to become one.",
-      "hi": "वृंदावन की पावन धरा पर राधा और कृष्ण का शाश्वत प्रेम प्रस्फुटित हुआ। उनका यह दिव्य संबंध सांसारिक अधिकारों, वचनों या अपेक्षाओं पर नहीं, अपितु एक-दूसरे के प्रति अगाध समर्पण पर आधारित था।\n\nराधा जी का प्रेम पूर्ण भक्ति का साक्षात स्वरूप है—एक ऐसा प्रेम जिसमें स्वयं का अस्तित्व प्रियतम में विलीन हो जाता है। इसी प्रकार, भक्ति परंपरा में कृष्ण राधा के बिना अपूर्ण हैं; दोनों मिलकर 'राधे-कृष्ण' के रूप में प्रेम और उपासना का शाश्वत प्रतीक बन गए।\n\nयद्यपि श्रीकृष्ण कालान्तर में वृंदावन से मथुरा चले गए, परंतु उनका भौतिक विरह उनके आंतरिक बंधन को तनिक भी कम न कर सका। भक्ति परंपरा में उनका यह विरह ही प्रेम की पराकाष्ठा बन गया—जहाँ सच्चा आत्मिक संबंध दूरी, काल और भौतिक सीमाओं से परे चला जाता है।\n\nअतः उनकी प्रेमकथा केवल एक लौकिक कथा नहीं, बल्कि जीवात्मा और परमात्मा के उस दिव्य संबंध का प्रतीक है, जो सदा एकाकार होने को लालायित रहता है।"
+      "hi": "वृंदावन की पावन धरा पर राधा और कृष्ण का शाश्वत प्रेम प्रस्फुटित हुआ। उनका यह दिव्य संबंध सांसारिक अधिकारों, वचनों या अपेक्षाओं पर नहीं, अपितु एक-दूसरे के प्रति अगाध समर्पण पर आधारित था।\n\nराधा जी का प्रेम पूर्ण भक्ति का साक्षात स्वरूप है—एक ऐसा प्रेम जिसमें स्वयं का अस्तित्व प्रियतम में विलीन हो जाता है। इसी प्रकार, भक्ति परंपरा में कृष्ण राधा के बिना अपूर्ण हैं; दोनों मिलकर राधे-कृष्ण के रूप में प्रेम और उपासना का शाश्वत प्रतीक बन गए।\n\nयद्यपि श्रीकृष्ण कालान्तर में वृंदावन से मथुरा चले गए, परंतु उनका भौतिक विरह उनके आंतरिक बंधन को तनिक भी कम न कर सका। भक्ति परंपरा में उनका यह विरह ही प्रेम की पराकाष्ठा बन गया—जहाँ सच्चा आत्मिक संबंध दूरी, काल और भौतिक सीमाओं से परे चला जाता है।\n\nअतः उनकी प्रेमकथा केवल एक लौकिक कथा नहीं, बल्कि जीवात्मा और परमात्मा के उस दिव्य संबंध का प्रतीक है, जो सदा एकाकार होने को लालायित रहता है।"
     },
     "lessonHighlight": {
       "en": "True love is a connection of souls, not a claim of possession.",
@@ -351,11 +351,11 @@
   },
   {
     "id": 15,
-    "icon": "⚔️",
     "theme": "courage",
+    "slug": "kansa-vadha",
     "title": {
       "en": "Kansa Vadha",
-      "hi": "कंस वध (Kansa Vadha)"
+      "hi": "कंस संहार"
     },
     "subtitle": {
       "en": "Krishna Defeats Kansa",
@@ -363,7 +363,7 @@
     },
     "about": {
       "en": "Years after sending countless demons to destroy Krishna, Kansa finally summoned Krishna and Balaram to Mathura, intending to kill them. Leaving behind the beloved people of Vrindavan, the brothers travelled to Mathura and entered Kansa’s arena.\n\nThere, Krishna and Balaram defeated the powerful wrestlers sent against them. Krishna then confronted Kansa himself. The tyrant who had imprisoned his own sister Devaki and Vasudeva and lived in fear of the prophecy was finally defeated by the very child he had tried so desperately to destroy.\n\nKrishna then freed Devaki and Vasudeva from imprisonment and restored Kansa’s father, Ugrasena, to the throne—bringing an end to years of fear and oppression in Mathura.\n\nThe prophecy made on the day of Krishna’s birth had finally been fulfilled.",
-      "hi": "श्रीकृष्ण को समाप्त करने के लिए अनगिनत असुरों को भेजने के वर्षों बाद, कंस ने अंततः कृष्ण और बलराम को वध करने के कुत्सित उद्देश्य से मथुरा के धनुष-यज्ञ में आमंत्रित किया। वृंदावन के प्रियजनों को विदा कर दोनों भाई मथुरा पहुंचे और कंस की रंगशाला में प्रविष्ट हुए।\n\nवहाँ कृष्ण और बलराम ने कंस द्वारा भेजे गए कुवलयापीड़ हाथी और चाणूर-मुष्टिक जैसे महाबलशाली मल्लों को परास्त किया। तत्पश्चात श्रीकृष्ण ने सीधे कंस का सामना किया। अपनी ही बहन देवकी और वसुदेव को बंदी बनाने वाला और भविष्यवाणी के भय में जीने वाला वह आततायी अंततः उसी बालक के हाथों मारा गया जिसे वह समाप्त करना चाहता था।\n\nश्रीकृष्ण ने अपने माता-पिता देवकी और वसुदेव को कारागार के बंधनों से मुक्त किया और कंस के वृद्ध पिता उग्रसेन को पुनः मथुरा का सिंहासन सौंपा—जिससे वर्षों के भय और अत्याचार का अंत हुआ।\n\nश्रीकृष्ण के जन्मदिवस पर की गई आकाशवाणी आज पूर्ण हो चुकी थी।"
+      "hi": "श्रीकृष्ण को समाप्त करने के लिए अनगिनत असुरों को भेजने के वर्षों बाद, कंस ने अंततः कृष्ण और बलराम को वध करने के उद्देश्य से मथुरा के धनुष-यज्ञ में आमंत्रित किया। वृंदावन के प्रियजनों को विदा कर दोनों भाई मथुरा पहुंचे और कंस की रंगशाला में प्रविष्ट हुए।\n\nवहाँ कृष्ण और बलराम ने कंस द्वारा भेजे गए कुवलयापीड़ हाथी और चाणूर-मुष्टिक जैसे महाबलशाली मल्लों को परास्त किया। तत्पश्चात श्रीकृष्ण ने सीधे कंस का सामना किया। अपनी ही बहन देवकी और वसुदेव को बंदी बनाने वाला और भविष्यवाणी के भय में जीने वाला वह आततायी अंततः उसी बालक के हाथों मारा गया जिसे वह समाप्त करना चाहता था।\n\nश्रीकृष्ण ने अपने माता-पिता देवकी और वसुदेव को कारागार के बंधनों से मुक्त किया और कंस के वृद्ध पिता उग्रसेन को पुनः मथुरा का सिंहासन सौंपा—जिससे वर्षों के भय और अत्याचार का अंत हुआ।\n\nश्रीकृष्ण के जन्मदिवस पर की गई आकाशवाणी पूर्ण हो चुकी थी।"
     },
     "lessonHighlight": {
       "en": "No power built on fear and injustice lasts forever.",
@@ -376,11 +376,11 @@
   },
   {
     "id": 16,
-    "icon": "👑",
     "theme": "friendship",
+    "slug": "pada-prakshalana",
     "title": {
       "en": "Pada Prakshalana",
-      "hi": "पाद प्रक्षालन — सुदामा स्वागत (Pada Prakshalana)"
+      "hi": "पद प्रक्षालन"
     },
     "subtitle": {
       "en": "Krishna Welcomes Sudama",
@@ -388,7 +388,7 @@
     },
     "about": {
       "en": "Years after studying together at Guru Sandipani’s ashram, Krishna had become the kingly lord of Dwarka, while his childhood friend Sudama lived a life of great simplicity and poverty.\n\nAt his wife’s urging, Sudama travelled to Dwarka to meet Krishna, carrying the only gift he could afford—a humble bundle of poha (flattened rice).\n\nThe moment Krishna saw his old friend, he rushed forward and embraced him with immense affection. He seated Sudama with honour and, despite all his royal grandeur, personally washed his friend’s feet. For Krishna, Sudama’s worn clothes and poverty meant nothing; before him stood the same beloved friend of his childhood.\n\nSudama could not bring himself to ask Krishna for financial help. Yet Krishna understood what remained unspoken and later blessed his friend with abundance.",
-      "hi": "गुरु सांदीपनि के आश्रम में साथ अध्ययन करने के वर्षों बाद, श्रीकृष्ण द्वारका के चक्रवर्ती राजा बन चुके थे, जबकि उनके बाल-सखा सुदामा अत्यंत दरिद्रता और सादगी का जीवन जी रहे थे।\n\nअपनी धर्मपत्नी के आग्रह पर, सुदामा द्वारकाधीश से मिलने गए। भेंट के रूप में उनके पास केवल वही था जो वे जुटा सके—एक फटे वस्त्र में बँधे थोड़े से तंदुल (चावल/पोहा)।\n\nजैसे ही श्रीकृष्ण ने अपने पुराने सखा को देखा, वे राजसिंहासन छोड़कर नंगे पाँव दौड़े और सुदामा को अश्रुपूरित नेत्रों से गले लगा लिया। उन्होंने सुदामा को स्वर्ण सिंहासन पर आदरपूर्वक बैठाया और अपने समस्त राजसी वैभव को विस्मृत कर, स्वयं परात में जल लेकर अपने अश्रुओं और जल से सखा के चरण पखारे। कृष्ण के लिए सुदामा के फटे वस्त्र और निर्धनता कोई अर्थ नहीं रखती थी; उनके सामने उनका वही प्रिय बाल-सखा खड़ा था।\n\nसुदामा संकोचवश अपनी आर्थिक विपन्नता के विषय में कुछ न मांग सके। परंतु अंतर्यामी प्रभु ने उनके अनकहे कष्ट को समझ लिया और बिना माँगे उन्हें अकूत संपदा और परमानंद से परिपूर्ण कर दिया।"
+      "hi": "गुरु सांदीपनि के आश्रम में साथ अध्ययन करने के वर्षों बाद, श्रीकृष्ण द्वारका के चक्रवर्ती राजा बन चुके थे, जबकि उनके बाल-सखा सुदामा अत्यंत दरिद्रता और सादगी का जीवन जी रहे थे।\n\nअपनी धर्मपत्नी के आग्रह पर, सुदामा द्वारकाधीश से मिलने गए। भेंट के रूप में उनके पास केवल वही था जो वे जुटा सके—एक फटे वस्त्र में बँधे थोड़े से तंदुल या पोहा।\n\nजैसे ही श्रीकृष्ण ने अपने पुराने सखा को देखा, वे राजसिंहासन छोड़कर नंगे पाँव दौड़े और सुदामा को अश्रुपूरित नेत्रों से गले लगा लिया। उन्होंने सुदामा को स्वर्ण सिंहासन पर आदरपूर्वक बैठाया और अपने समस्त राजसी वैभव को विस्मृत कर, स्वयं परात में जल लेकर अपने अश्रुओं और जल से सखा के चरण पखारे। कृष्ण के लिए सुदामा के फटे वस्त्र और निर्धनता कोई अर्थ नहीं रखती थी; उनके सामने उनका वही प्रिय बाल-सखा खड़ा था।\n\nसुदामा संकोचवश अपनी आर्थिक विपन्नता के विषय में कुछ न मांग सके। परंतु अंतर्यामी प्रभु ने उनके अनकहे कष्ट को समझ लिया और बिना माँगे उन्हें अकूत संपदा और परमानंद से परिपूर्ण कर दिया।"
     },
     "lessonHighlight": {
       "en": "True greatness is measured by humility, not status.",
