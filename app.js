@@ -316,31 +316,6 @@ const STORIES_DATA = [
   {
     "id": 13,
     "theme": "love",
-    "slug": "kesh-prasadhana-shringar-leela",
-    "title": {
-      "en": "Kesh-Prasadhana / Shringar Leela",
-      "hi": "केश-प्रसाधन व शृंगार लीला"
-    },
-    "subtitle": {
-      "en": "Rukmini-Krishna Shringar Leela",
-      "hi": "श्रीकृष्ण द्वारा प्रेमपूर्वक महारानी रुक्मिणी का केश-शृंगार व सेवा"
-    },
-    "about": {
-      "en": "Among the tender Leelas of Rukmini and Krishna are moments of Shringar—adorning one another with affection. In Kesh-Prasadhana, Krishna lovingly arranges Rukmini’s hair, decorating it with fragrant flowers and ornaments.\n\nHere, the one worshipped by the entire world lovingly serves his beloved. The gesture is simple and intimate: Krishna’s attention is not on his own grandeur, but on bringing joy to Rukmini.\n\nThe Leela beautifully expresses the tenderness of Rukmini-Krishna prema, where love is shown not merely through words, but through care, attention and acts of service.",
-      "hi": "रुक्मिणी और श्रीकृष्ण की सुकोमल लीलाओं में शृंगार के क्षण अनुपम हैं—जहाँ वे एक-दूसरे को अगाध स्नेह से सुसज्जित करते हैं। केश-प्रसाधन में, श्रीकृष्ण स्वयं अपने हाथों से महारानी रुक्मिणी के केश संवारते हैं और उन्हें सुगंधित पुष्पों व आभूषणों से सजाते हैं।\n\nयहाँ, जिनकी पूजा समस्त त्रिलोकी करती है, वे स्वयं अपनी प्रियतमा की प्रेममयी सेवा करते हैं। यह भाव अत्यंत सरल और आत्मीय है: प्रभु का ध्यान अपने ऐश्वर्य पर नहीं, अपितु रुक्मिणी जी के मुख पर आनंदमयी मुस्कान लाने पर है।\n\nयह लीला रुक्मिणी-कृष्ण प्रेम के उस कोमल स्वरूप को प्रकट करती है, जहाँ प्रेम केवल शब्दों में नहीं, बल्कि आत्मीय देखभाल, सम्मान और सेवा-भाव में अभिव्यक्त होता है।"
-    },
-    "lessonHighlight": {
-      "en": "Love is not only something we feel; it is something we do.",
-      "hi": "प्रेम केवल एक भावना नहीं; यह सेवा और कर्म में दिखने वाली अनुभूति है।"
-    },
-    "lesson": {
-      "en": "Kesh-Prasadhana reminds us that the deepest relationships are nurtured through small acts of care, respect and attention. True love does not ask, “What will I receive?” but finds happiness in making the other person feel cherished, seen and loved.",
-      "hi": "केश-प्रसाधन हमें स्मरण कराता है कि प्रगाढ़ संबंध परस्पर देखभाल, सम्मान और ध्यान के छोटे-छोटे कार्यों से ही सींचे जाते हैं। सच्चा प्रेम कभी यह नहीं पूछता, मुझे क्या मिलेगा? बल्कि वह इस बात में आनंद पाता है कि उसका प्रियजन स्वयं को सम्मानित, सुरक्षित और प्रेममय अनुभव करे।"
-    }
-  },
-  {
-    "id": 14,
-    "theme": "love",
     "slug": "radha-krishna-premkatha",
     "title": {
       "en": "Radha Krishna ki Premkatha",
@@ -364,7 +339,7 @@ const STORIES_DATA = [
     }
   },
   {
-    "id": 15,
+    "id": 14,
     "theme": "courage",
     "slug": "kansa-vadha",
     "title": {
@@ -389,7 +364,7 @@ const STORIES_DATA = [
     }
   },
   {
-    "id": 16,
+    "id": 15,
     "theme": "friendship",
     "slug": "pada-prakshalana",
     "title": {
@@ -411,6 +386,31 @@ const STORIES_DATA = [
     "lesson": {
       "en": "Pada Prakshalana reminds us that wealth, position and success should never make us forget the people who walked beside us before we had them. Krishna had everything, yet he bowed to wash his friend’s feet.\n\nTrue friendship sees the person—not their wealth, status or circumstances.",
       "hi": "पाद प्रक्षालन हमें सिखाता है कि धन, पद और सफलता मिलने पर हमें कभी उन लोगों को नहीं भूलना चाहिए जो हमारे संघर्ष के दिनों में हमारे साथ चले थे। श्रीकृष्ण के पास समस्त ब्रह्मांड का ऐश्वर्य था, फिर भी वे अपने दरिद्र मित्र के चरण पखारने के लिए झुक गए।\n\nसच्ची मित्रता केवल व्यक्ति के हृदय को देखती है—उसकी संपत्ति, पद या परिस्थितियों को नहीं।"
+    }
+  },
+  {
+    "id": 16,
+    "theme": "love",
+    "slug": "kesh-prasadhana-shringar-leela",
+    "title": {
+      "en": "Kesh-Prasadhana / Shringar Leela",
+      "hi": "केश-प्रसाधन व शृंगार लीला"
+    },
+    "subtitle": {
+      "en": "Rukmini-Krishna Shringar Leela",
+      "hi": "श्रीकृष्ण द्वारा प्रेमपूर्वक महारानी रुक्मिणी का केश-शृंगार व सेवा"
+    },
+    "about": {
+      "en": "Among the tender Leelas of Rukmini and Krishna are moments of Shringar—adorning one another with affection. In Kesh-Prasadhana, Krishna lovingly arranges Rukmini’s hair, decorating it with fragrant flowers and ornaments.\n\nHere, the one worshipped by the entire world lovingly serves his beloved. The gesture is simple and intimate: Krishna’s attention is not on his own grandeur, but on bringing joy to Rukmini.\n\nThe Leela beautifully expresses the tenderness of Rukmini-Krishna prema, where love is shown not merely through words, but through care, attention and acts of service.",
+      "hi": "रुक्मिणी और श्रीकृष्ण की सुकोमल लीलाओं में शृंगार के क्षण अनुपम हैं—जहाँ वे एक-दूसरे को अगाध स्नेह से सुसज्जित करते हैं। केश-प्रसाधन में, श्रीकृष्ण स्वयं अपने हाथों से महारानी रुक्मिणी के केश संवारते हैं और उन्हें सुगंधित पुष्पों व आभूषणों से सजाते हैं।\n\nयहाँ, जिनकी पूजा समस्त त्रिलोकी करती है, वे स्वयं अपनी प्रियतमा की प्रेममयी सेवा करते हैं। यह भाव अत्यंत सरल और आत्मीय है: प्रभु का ध्यान अपने ऐश्वर्य पर नहीं, अपितु रुक्मिणी जी के मुख पर आनंदमयी मुस्कान लाने पर है।\n\nयह लीला रुक्मिणी-कृष्ण प्रेम के उस कोमल स्वरूप को प्रकट करती है, जहाँ प्रेम केवल शब्दों में नहीं, बल्कि आत्मीय देखभाल, सम्मान और सेवा-भाव में अभिव्यक्त होता है।"
+    },
+    "lessonHighlight": {
+      "en": "Love is not only something we feel; it is something we do.",
+      "hi": "प्रेम केवल एक भावना नहीं; यह सेवा और कर्म में दिखने वाली अनुभूति है।"
+    },
+    "lesson": {
+      "en": "Kesh-Prasadhana reminds us that the deepest relationships are nurtured through small acts of care, respect and attention. True love does not ask, “What will I receive?” but finds happiness in making the other person feel cherished, seen and loved.",
+      "hi": "केश-प्रसाधन हमें स्मरण कराता है कि प्रगाढ़ संबंध परस्पर देखभाल, सम्मान और ध्यान के छोटे-छोटे कार्यों से ही सींचे जाते हैं। सच्चा प्रेम कभी यह नहीं पूछता, मुझे क्या मिलेगा? बल्कि वह इस बात में आनंद पाता है कि उसका प्रियजन स्वयं को सम्मानित, सुरक्षित और प्रेममय अनुभव करे।"
     }
   }
 ];
@@ -454,7 +454,7 @@ const TRANSLATIONS = {
     wisdom_subheading: "चार दिव्य मार्ग जो कृष्ण की कथाओं को हमारे दैनिक जीवन, भावनाओं और चेतना से जोड़ते हैं।",
     cat_love_title: "निश्छल प्रेम",
     cat_love_desc: "माता यशोदा के वात्सल्य से लेकर श्रीराधा संग दिव्य महारास तक, कान्हा सिखाते हैं कि सच्चा प्रेम अधिकार जताने में नहीं, बल्कि निःस्वार्थ समर्पण, आत्मीय सेवा और निश्छल स्नेह में खिलता है।",
-    cat_love_stories: "नवनीत भक्षण • कृष्ण-बलराम • रास लीला • शृंगार लीला • राधा-कृष्ण",
+    cat_love_stories: "नवनीत भक्षण • कृष्ण-बलराम • रास लीला • राधा-कृष्ण • शृंगार लीला",
     cat_friendship_title: "सच्ची मित्रता",
     cat_friendship_desc: "गोकुल में सखाओं संग माखन बांटने और पतंग उड़ाने से लेकर राजसिंहासन छोड़ सुदामा के चरण पखारने तक, कान्हा का संदेश है कि सच्ची मित्रता में धन, पद और ऐश्वर्य का कोई भेद नहीं होता।",
     cat_friendship_stories: "माखन चोरी • कृष्णा की टोली • पद प्रक्षालन (सुदामा)",
@@ -528,7 +528,7 @@ const TRANSLATIONS = {
     wisdom_subheading: "Four sacred paths connecting Krishna's stories to our everyday life, relationships, and spiritual awakening.",
     cat_love_title: "Unconditional Love",
     cat_love_desc: "From mother Yashoda feeding fresh butter to the transcendent Raas with Radha, Krishna reveals that true love demands nothing—it blossoms through selfless care, deep affection, and complete emotional surrender.",
-    cat_love_stories: "Navnit Bhakshan • Krishna Balaram • Raas Leela • Shringar Leela • Radha-Krishna",
+    cat_love_stories: "Navnit Bhakshan • Krishna Balaram • Raas Leela • Radha-Krishna • Shringar Leela",
     cat_friendship_title: "Pure Friendship",
     cat_friendship_desc: "Whether stealing butter with village friends, flying kites under open skies, or washing Sudama's weary feet, Krishna shows that genuine camaraderie dissolves all boundaries of wealth, status, and pride.",
     cat_friendship_stories: "Makhan Chori • Krishna ki Toli • Pada Prakshalana (Sudama)",
